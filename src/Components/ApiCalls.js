@@ -23,5 +23,13 @@ export function getMovies() {
 
 export function getSingleMovie(id) {
   return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-  .then(res => res.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .catch(error => {
+    console.error("There was a problem with the fetch operation:", error);
+  });
 }
