@@ -1,7 +1,7 @@
-import './App.css';
+// import './App.css';
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
 
 function App() {

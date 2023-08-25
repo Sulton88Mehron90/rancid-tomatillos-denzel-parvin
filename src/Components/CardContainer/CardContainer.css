@@ -1,0 +1,11 @@
+.card-container {
+  /* position: relative; */
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;  
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,38 @@
+/* Container for each card */
+div[id] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11262D;
+  box-sizing: border-box;
+  height: 400px;
+  width: 240px;
+  margin: 8px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+div[id]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image styling */
+div[id] img[id] {
+  margin-top: 16px;
+  height: 320px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Title and Rating styling */
+div[id] h3[id] {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}

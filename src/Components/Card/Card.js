@@ -1,3 +1,5 @@
+import './Card.css';
+
 function Card({title, img, rating, id}) {
   return (
     <div id={id}>
