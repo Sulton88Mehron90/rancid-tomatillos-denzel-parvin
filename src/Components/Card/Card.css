@@ -1,31 +1,46 @@
-/* Card.css */
-
-/* Styling the Card component */
-div[id] {
-  background-color: #ffffff; /* White background */
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
-  overflow: hidden; /* To ensure nothing spills over */
-  text-align: center; /* Center text */
-  transition: transform 0.3s ease-in-out; /* Optional: for hover effect */
+/* div[id] {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center; 
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Image styling */
 div[id] img {
-  width: 100%; /* Full width */
-  object-fit: cover; /* Maintain aspect ratio */
+  width: 100%;
+  object-fit: cover;
 }
 
-/* Title and rating text styling */
 div[id] h3 {
   margin: 0;
   padding: 8px;
   font-size: 1rem;
-  color: #333; /* Dark text */
+  color: #333;
 }
 
-/* Optional: Hover effect to scale the card */
 div[id]:hover {
   transform: scale(1.05);
+}
+ */
+
+div[id] {
+  background-color: #222222; 
+  border: 1px solid #444444;  
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;  
+  overflow: hidden;
+}
+
+div[id] img {
+  width: 100%;
+  object-fit: cover;
+}
+
+div[id] h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2rem;
 }

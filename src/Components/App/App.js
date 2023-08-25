@@ -3,6 +3,7 @@ import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
 // import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
+import '../../Tomatillo.png';
 
 function App() {
   const [movies, setMovies] = useState([]);
