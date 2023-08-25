@@ -3,6 +3,7 @@ import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
 // import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
+import Focus from '../Focus/Focus';
 import '../../Tomatillo.png';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     });
   }, [])
 
-  console.log("Data from API:", movies)
+  // console.log("Data from API:", movies)
 
   return (
     <main>
@@ -25,6 +26,9 @@ function App() {
       </nav>
       <div className="main-container">
         <CardContainer movies={movies}/>
+      </div>
+      <div>
+        <Focus />
       </div>
     </main>
   )
