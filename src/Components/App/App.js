@@ -10,9 +10,13 @@ function App() {
   useEffect(() => {
     getMovies()
     .then(data => setMovies(data.movies))
+    .catch(err => {
+      console.error("Error fetching movies:", err);
+    });
   }, [])
 
-  console.log(movies)
+  console.log("Data from API:", movies)
+
   return (
     <main>
       <nav>
