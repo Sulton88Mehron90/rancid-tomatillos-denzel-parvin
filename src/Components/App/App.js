@@ -1,6 +1,8 @@
 import './App.css';
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
+import Card from '../Card/Card';
+import CardContainer from '../CardContainer/CardContainer';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -12,7 +14,12 @@ function App() {
 
   console.log(movies)
   return (
-    <h1>Rancid Tomatillos</h1>
+    <main>
+      <nav>
+        <h1>Rancid Tomatillos</h1>
+      </nav>
+      <CardContainer movies={movies}/>
+    </main>
   )
 }
 
