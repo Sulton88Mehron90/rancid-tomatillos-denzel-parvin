@@ -16,3 +16,5 @@ export function getMovies() {
       console.error("There was a problem with the fetch operation:", error);
     });
 }
+// throw new Error(...): This throws a new Error object, which can be caught in a .catch() block or a try/catch statement. Throwing an error will break out of the current function and go straight to the nearest error-handling block.
+// `HTTP error! status: ${response.status}`: This is a template literal that creates a string. It will replace ${response.status} with the actual HTTP status code returned by the server. For example, if a 404 status code is returned, the error message would be "HTTP error! status: 404".
