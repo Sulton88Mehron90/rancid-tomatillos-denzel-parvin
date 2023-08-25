@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+import "../CardContainer/CardContainer.css"
 
 function CardContainer({movies}) {
   let allMovies = [];
@@ -16,10 +17,10 @@ function CardContainer({movies}) {
     )
   })
   return (
-    <div>
+    <div className="card-container">
       {allMovies}
     </div>
-  )
+  );
 }
 
 export default CardContainer;

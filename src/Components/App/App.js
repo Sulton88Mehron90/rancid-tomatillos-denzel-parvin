@@ -1,8 +1,9 @@
 import './App.css';
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
+import '../../Tomatillo.png';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -10,15 +11,21 @@ function App() {
   useEffect(() => {
     getMovies()
     .then(data => setMovies(data.movies))
+    .catch(err => {
+      console.error("Error fetching movies:", err);
+    });
   }, [])
 
-  console.log(movies)
+  console.log("Data from API:", movies)
+
   return (
     <main>
       <nav>
         <h1>Rancid Tomatillos</h1>
       </nav>
-      <CardContainer movies={movies}/>
+      <div className="main-container">
+        <CardContainer movies={movies}/>
+      </div>
     </main>
   )
 }

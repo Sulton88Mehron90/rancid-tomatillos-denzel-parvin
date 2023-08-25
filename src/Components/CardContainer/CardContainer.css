@@ -1,0 +1,32 @@
+/* .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-container > div {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container > div:hover {
+  transform: translateY(-10px);
+} */
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-container > div {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-container > div:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
