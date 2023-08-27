@@ -64,6 +64,18 @@
     white-space: nowrap;
   }
 
+  .welcome-note {
+    align-items: center;
+    margin-left: 100%;
+    color: #00FF00;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'Courier New', cursive;
+    white-space: nowrap;
+    text-shadow: 0px 0px 5px #000000; 
+  }
+  
+
 /* For debugging */
   /* .nav-title, .nav-content, nav {
     border: 1px solid red;  
