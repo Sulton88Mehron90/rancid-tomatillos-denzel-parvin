@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import '../Navbar/Navbar.css'
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
