@@ -1,6 +1,6 @@
 import './Navbar.css'
 import Tomatillo from '../../images/Tomatillo.png'
-import redTomato from '../../images/redTomato.png'
+// import redTomato from '../../images/redTomato.png'
 
 const Navbar = () => {
   return (
