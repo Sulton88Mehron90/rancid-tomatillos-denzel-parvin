@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +67,70 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+
+
+
+
+# Rancid Tomatillos
+
+## Description
+
+<!-- This is a movie listing website that uses the fetch API to display information about a variety of movies. This web app also allows searching movies by name and clicking a movie to view more details. -->
+
+## Deployed Link
+[Open the app here]()
+
+## Tech Stack
+
+- React 
+- CSS
+- React Router 
+- Cypress Testing
+- PropTypes Library
+- Fetch API
+
+
+## Technical Pointers
+
+
+### Installation Instructions
+
+- Clone this repository to your local machine using the command: `git clone git@github.com:Sulton88Mehron90/rancid-tomatillos-denzel-parvin.git`
+- Run the command: `cd rancid-tomatillos`
+- Run the command: `npm install`
+- Run the command: `npm start`
+
+## Learning Goals
+
+## Setup
+
+
+## Preview of App
+[![App Preview]()]()
+
+## Reflections: 
+
+
+## Countributors:
+- [Denzel Turambi](https://github.com/Denzel-Turambi)
+- [Parvin Sattorova](https://github.com/Sulton88Mehron90)
+
+<!-- 
+<table>
+    <tr>
+        <td> Parvin A. Sattorova 
+            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
+            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
+        </td>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table> -->
+
+
+## Wins/Challenges:
+Challenges: 
+
+Wins: 

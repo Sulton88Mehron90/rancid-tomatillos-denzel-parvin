@@ -9,7 +9,7 @@ function Focus() {
     .then(data => setSingleMovie(data.movie))
   }, [])
 
-  console.log(singleMovie)
+  console.log("singleMovie after Fetch",singleMovie)
 
   return
 }
