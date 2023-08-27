@@ -14,3 +14,17 @@
   transform: scale(1.05) translateY(-10px);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
+
+/* For tablet screens */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

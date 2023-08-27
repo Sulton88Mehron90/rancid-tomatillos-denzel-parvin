@@ -75,9 +75,24 @@
     text-shadow: 0px 0px 5px #000000; 
   }
   
-
 /* For debugging */
   /* .nav-title, .nav-content, nav {
     border: 1px solid red;  
   }
    */
+
+/* For tablet and mobile screens */
+@media (max-width: 768px) {
+  nav h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .welcome-note {
+    font-size: 1rem;
+  }
+}

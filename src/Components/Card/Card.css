@@ -55,3 +55,20 @@ div[id] h3 {
   box-shadow: 0px 0px 15px 5px rgb(229, 217, 217);
   transition: box-shadow 0.3s ease-in-out;
 }
+
+/* Responsive card settings */
+@media (max-width: 768px) {
+  div[id] {
+    border-radius: 4px;
+  }
+  
+  div[id] h3 {
+    font-size: 1rem;
+  }
+  
+  .green-rating-logo,
+  .red-rating-logo {
+    height: 20px;
+    width: 20px;
+  }
+}
