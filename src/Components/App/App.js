@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import CardContainer from '../CardContainer/CardContainer';
 import Focus from '../Focus/Focus';
 import Navbar from '../Navbar/Navbar';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -24,12 +25,16 @@ function App() {
   return (
     <main>
       <Navbar />
-      <div className="main-container">
-        <CardContainer movies={movies}/>
-      </div>
-      <div>
-        <Focus />
-      </div>
+      <Routes>
+        <Route path="/" className="main-container" element={
+          <CardContainer movies={movies}/>
+        }>
+        </Route>
+        <Route path="/movies/:id" element={
+          <Focus />
+        }>
+        </Route>
+      </Routes>
     </main>
   )
 }
