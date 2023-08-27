@@ -1,10 +1,12 @@
-import './App.css';
+// import './App.css';
+import '../Navbar/Navbar.css'
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
 // import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
 import Focus from '../Focus/Focus';
-import '../../Tomatillo.png';
+import Navbar from '../Navbar/Navbar';
+
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -21,9 +23,7 @@ function App() {
 
   return (
     <main>
-      <nav>
-        <h1>Rancid Tomatillos</h1>
-      </nav>
+      <Navbar />
       <div className="main-container">
         <CardContainer movies={movies}/>
       </div>
