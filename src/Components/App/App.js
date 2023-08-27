@@ -19,7 +19,7 @@ function App() {
     });
   }, [])
 
-  // console.log("Data from API:", movies)
+  console.log("Data All movies from API:", movies)
 
   return (
     <main>
