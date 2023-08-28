@@ -11,16 +11,28 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [error, setError] = useState('')
 
   useEffect(() => {
     getMovies()
     .then(data => setMovies(data.movies))
-    .catch(err => {
-      console.error("Error fetching movies:", err);
+    .catch(error => {
+      if(error.status === 500) {
+        setError('Uh oh! Looks like something went wrong. Try again later.')
+      } else {
+        setError(error)
+      }
     });
   }, [])
 
   console.log("Data All movies from API:", movies)
+
+  if(error) {
+    console.log('error', error)
+    return (
+      <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
+    )
+  }
 
   return (
     <main>
