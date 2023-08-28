@@ -9,7 +9,7 @@ function Card({title, img, rating, id}) {
   const cardClass = isSelected ? "glowing-border" : "";
 
   return (
-    <Link to={`/movies/${id}`}>
+     <Link to={`/movies/${id}`} className="no-underline">
       <div id={id} className={cardClass} onClick={() => setIsSelected(!isSelected)}>
         <img id={id} src={img} alt={`Poster of ${title}`} />
         <h3 id={id}>{title}</h3>
