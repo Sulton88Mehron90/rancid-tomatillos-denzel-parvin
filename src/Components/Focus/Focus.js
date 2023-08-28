@@ -6,6 +6,7 @@ import './Focus.css';
 
 function Focus() {
   const [singleMovie, setSingleMovie] = useState({})
+  const [singleMovieError, setSingleMovieError] = useState('')
 
   const movieID = useParams();
   console.log('movieID', movieID)
@@ -13,13 +14,24 @@ function Focus() {
   useEffect(() => {
     getSingleMovie(movieID.id)
       .then(data => setSingleMovie(data.movie))
-  }, [])
-  // The warning on the webpack is related to the useEffect hook in your Focus.js component. when i add the movieID.id it was gone. weird. [movieID.id]
-
+      .catch(error => {
+        if(error.status === 500) {
+          setSingleMovieError('Uh oh! Looks like something went wrong. Try again later.')
+        } else {
+          setSingleMovieError(error)
+        }
+      })
+  }, [movieID.id])
+  
   console.log("singleMovie after Fetch", singleMovie); //console
 
   console.log(typeof singleMovie.genres, singleMovie.genres); //console
 
+  if(singleMovieError) {
+    return (
+      <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
+    )
+  }
 
   return (
     <div id="focus-container" style={{
