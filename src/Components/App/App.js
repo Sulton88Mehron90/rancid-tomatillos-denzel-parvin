@@ -2,7 +2,6 @@ import './App.css';
 import '../Navbar/Navbar.css'
 import { getMovies } from '../ApiCalls';
 import { useEffect, useState } from 'react';
-import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
 import Focus from '../Focus/Focus';
 import Navbar from '../Navbar/Navbar';

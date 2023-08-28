@@ -2,6 +2,7 @@ import './Card.css';
 import Tomatillo from '../../images/Tomatillo.png'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function Card({title, img, rating, id}) {
   const [isSelected, setIsSelected] = useState(false);
@@ -29,3 +30,10 @@ function Card({title, img, rating, id}) {
 }
 
 export default Card;
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired
+}
