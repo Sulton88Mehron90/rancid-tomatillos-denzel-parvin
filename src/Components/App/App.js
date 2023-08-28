@@ -6,7 +6,8 @@ import Card from '../Card/Card';
 import CardContainer from '../CardContainer/CardContainer';
 import Focus from '../Focus/Focus';
 import Navbar from '../Navbar/Navbar';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import ErrorHandling from '../ErrorHandling/ErrorHandling';
 
 
 function App() {
@@ -46,6 +47,11 @@ function App() {
           <Focus />
         }>
         </Route>
+        <Route path="/404" element={
+          <ErrorHandling />
+        }>
+        </Route>
+        <Route path="*" element={<Navigate to="/404"/>}></Route>
       </Routes>
     </main>
   )
