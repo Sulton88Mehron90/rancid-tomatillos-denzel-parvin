@@ -10,7 +10,6 @@ export function getMovies() {
       console.error("There was a problem with the fetch operation:", error);
     });
 }
-// https://rancid-tomatillos.herokuapp.com/api/v2/movies/:movie_id
 
 export function getSingleMovie(id) {
   return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
