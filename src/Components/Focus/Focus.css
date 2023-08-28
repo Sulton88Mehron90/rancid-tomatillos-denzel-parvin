@@ -91,6 +91,7 @@
   border: none;
   box-shadow: 0px 0px 15px 5px rgb(229, 217, 217);
   margin-right: 40px;
+  /* margin-bottom: 100px; */
 }
 
 #focus-container img:active {
