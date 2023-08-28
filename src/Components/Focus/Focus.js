@@ -14,6 +14,7 @@ function Focus() {
     getSingleMovie(movieID.id)
       .then(data => setSingleMovie(data.movie))
   }, [])
+  // The warning on the webpack is related to the useEffect hook in your Focus.js component. when i add the movieID.id it was gone. weird. [movieID.id]
 
   console.log("singleMovie after Fetch", singleMovie)
 
