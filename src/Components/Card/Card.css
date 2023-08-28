@@ -57,6 +57,11 @@ div[id] h3 {
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.no-underline, .no-underline:visited, .no-underline:focus, .no-underline:active {
+  text-decoration: none;
+  outline: none;
+}
+
 /* Responsive card settings */
 @media (max-width: 768px) {
   div[id] {

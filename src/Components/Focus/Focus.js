@@ -31,7 +31,6 @@ function Focus() {
         <p><span className="label">overview:</span> {singleMovie.overview}</p>
         <p><span className="label">average rating:</span> {singleMovie.average_rating}/10</p>
         <p><span className="label">runtime:</span> {singleMovie.runtime} minutes</p>
-        {/* <p><span className="label">genre(s):</span> {singleMovie.genres.join(", ")}</p> */}
         <p><span className="label">genre(s):</span> {singleMovie.genres ? singleMovie.genres.join(', ') : 'N/A'}</p>
         <p><span className="label">release date:</span> {singleMovie.release_date}</p>
         <NavLink to="/">
