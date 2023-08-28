@@ -1,0 +1,54 @@
+#focus-container {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Georgia', serif;
+  height: 100vh;  /* Make it full height */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  /* Faded background will be set dynamically in JSX */
+}
+
+#focus-text-content {
+  padding-left: 20px;
+  padding-top: 200px; 
+  margin-right: 30px;
+  flex: 1;
+}
+
+.label {
+  font-weight: bold; 
+  color: #FFD700; 
+}
+
+#focus-container h2, #focus-container h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+#focus-container p {
+  margin: 5px;
+  font-size: 1.2rem;
+}
+
+#focus-container img {
+  flex: 1;  /* Added to make the image flexible */
+  width: 70%;
+  margin-top: 20px;
+}
+
+#focus-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#focus-container button:hover {
+  background-color: darkred;
+}
