@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
 import "../CardContainer/CardContainer.css"
+import PropTypes from 'prop-types';
 
 function CardContainer({movies}) {
   let allMovies = [];
@@ -24,3 +25,7 @@ function CardContainer({movies}) {
 }
 
 export default CardContainer;
+
+CardContainer.propTypes = {
+  movies: PropTypes.array.isRequired
+};
