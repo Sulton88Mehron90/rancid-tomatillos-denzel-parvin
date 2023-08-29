@@ -7,7 +7,7 @@ function CardContainer({movies}) {
 
   allMovies = movies.map(movie => {
     return (
-      <div key={movie.id}>
+      <div className='movie-card' key={movie.id}>
         <Card 
           title = {movie.title}
           img = {movie.poster_path}
