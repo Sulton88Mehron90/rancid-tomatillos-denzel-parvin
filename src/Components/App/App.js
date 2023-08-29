@@ -7,31 +7,64 @@ import Focus from '../Focus/Focus';
 import Navbar from '../Navbar/Navbar';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ErrorHandling from '../ErrorHandling/ErrorHandling';
-
+import Error500 from '../ErrorHandling/Error500';
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   getMovies()
+  //   .then(data => setMovies(data.movies))
+  //   .catch(error => {
+  //     if(error.status === 500) {
+  //       setError('Uh oh! Looks like something went wrong. Try again later.')
+  //     } else {
+  //       setError(error)
+  //     }
+  //   });
+  // }, [])
 
   useEffect(() => {
+    setIsLoading(true);
     getMovies()
-    .then(data => setMovies(data.movies))
-    .catch(error => {
-      if(error.status === 500) {
-        setError('Uh oh! Looks like something went wrong. Try again later.')
-      } else {
-        setError(error)
-      }
-    });
-  }, [])
+      .then(data => {
+        if (data && data.movies) {
+          setMovies(data.movies);
+          setError('');
+        }
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.log('Caught error:', error.message);  // console
+        if (error.message === '500') {
+          setError('500');
+        } else if (error.message === '404') {
+          setError('404');
+        } else {
+          setError('Other');
+        }
+        setIsLoading(false);
+      });
+  }, []);
 
   console.log("Data All movies from API:", movies)
-
-  if(error) {
-    console.log('error', error)
+  
+  if (isLoading) {
     return (
-      <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
-    )
+      <div className="loading">
+        <div className="spinner"></div> 
+      </div>
+    );
+  }
+
+  if (error === '404') {
+    return <ErrorHandling />;
+  } else if (error === '500') {
+    return <Error500 />;
+  } else if (error) {
+    return <h2>Uh oh! Looks like something went wrong. Try again later.</h2>;
   }
 
   return (
@@ -39,7 +72,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" className="main-container" element={
-          <CardContainer movies={movies}/>
+          <CardContainer movies={movies} />
         }>
         </Route>
         <Route path="/movies/:id" element={
@@ -50,7 +83,7 @@ function App() {
           <ErrorHandling />
         }>
         </Route>
-        <Route path="*" element={<Navigate to="/404"/>}></Route>
+        <Route path="*" element={<Navigate to="/404" />}></Route>
       </Routes>
     </main>
   )

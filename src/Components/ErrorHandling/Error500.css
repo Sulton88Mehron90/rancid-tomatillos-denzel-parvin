@@ -1,0 +1,37 @@
+.error-page-container {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-heading {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message h3 {
+    font-size: 35px;
+    color: red;
+    margin-top: -20px;
+  }
+  
+  .go-home-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-home-button:hover {
+    background-color: #FFC300;
+  }
+  
