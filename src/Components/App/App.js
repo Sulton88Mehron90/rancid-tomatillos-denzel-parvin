@@ -50,6 +50,7 @@ function App() {
   }, []);
 
   console.log("Data All movies from API:", movies)
+  
   if (isLoading) {
     return (
       <div className="loading">
