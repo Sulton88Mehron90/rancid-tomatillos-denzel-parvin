@@ -1,0 +1,57 @@
+.error-page-container {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-handling h3 {
+    font-size: 35px;
+    color: red;
+    margin-top: -20px;
+  }
+  
+  .error-heading {
+    font-size: 18px;
+    margin-bottom: 38px;
+  }
+  
+  .fun-fact-container {
+    border: 1px solid #686565e6;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+  }
+  
+  .fun-fact-heading {
+    font-size: 30px;
+    margin-bottom: 90px;
+  }
+  
+  .fun-fact {
+    font-size: 28px;
+    color: red;
+    margin-top: -20px;
+  }
+  
+  .go-home-button {
+    margin-top: 90px;
+    margin-bottom: 120px;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .go-home-button:hover {
+    background-color: #FFC300;
+  }
+  
