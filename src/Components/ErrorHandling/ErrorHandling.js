@@ -17,6 +17,8 @@ const movieFunFacts = [
   "In 'The Matrix,' Neo's passport expires on September 11, 2001.",
   "The carpet in The Shining's Overlook Hotel is the same design as the one in Toy Story's Sid's house.",
 ];
+
+
 function ErrorHandling() {
   const [funFact, setFunFact] = useState('');
 
