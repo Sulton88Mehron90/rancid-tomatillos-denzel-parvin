@@ -18,7 +18,6 @@ const movieFunFacts = [
   "The carpet in The Shining's Overlook Hotel is the same design as the one in Toy Story's Sid's house.",
 ];
 
-
 function ErrorHandling() {
   const [funFact, setFunFact] = useState('');
 
