@@ -12,6 +12,7 @@ import Error500 from '../ErrorHandling/Error500';
 function App() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(true);
 
   // useEffect(() => {
   //   getMovies()
@@ -26,26 +27,36 @@ function App() {
   // }, [])
 
   useEffect(() => {
+    setIsLoading(true);
     getMovies()
-    .then(data => {
-      if (data && data.movies) {
-        setMovies(data.movies);
-        setError('');
-      }
-    })
-    .catch(error => {
-      console.log('Caught error:', error.message);  // console
-      if (error.message === '500') {
-        setError('500');
-      } else if (error.message === '404') {
-        setError('404');
-      } else {
-        setError('Other');
-      }
-    });
+      .then(data => {
+        if (data && data.movies) {
+          setMovies(data.movies);
+          setError('');
+        }
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.log('Caught error:', error.message);  // console
+        if (error.message === '500') {
+          setError('500');
+        } else if (error.message === '404') {
+          setError('404');
+        } else {
+          setError('Other');
+        }
+        setIsLoading(false);
+      });
   }, []);
 
   console.log("Data All movies from API:", movies)
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <div className="spinner"></div> 
+      </div>
+    );
+  }
 
   if (error === '404') {
     return <ErrorHandling />;
