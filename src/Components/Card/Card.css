@@ -11,8 +11,6 @@ div[id] {
 }
 
  div[id]:hover { 
-  /* outline: 2px solid silver;
-  outline: 2px solid rgb(224, 9, 9); */
   outline: 2px solid gray;
   outline-offset: 10px;
 }

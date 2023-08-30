@@ -14,18 +14,6 @@ function App() {
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   getMovies()
-  //   .then(data => setMovies(data.movies))
-  //   .catch(error => {
-  //     if(error.status === 500) {
-  //       setError('Uh oh! Looks like something went wrong. Try again later.')
-  //     } else {
-  //       setError(error)
-  //     }
-  //   });
-  // }, [])
-
   useEffect(() => {
     setIsLoading(true);
     getMovies()
@@ -50,11 +38,11 @@ function App() {
   }, []);
 
   console.log("Data All movies from API:", movies)
-  
+
   if (isLoading) {
     return (
       <div className="loading">
-        <div className="spinner"></div> 
+        <div className="spinner"></div>
       </div>
     );
   }

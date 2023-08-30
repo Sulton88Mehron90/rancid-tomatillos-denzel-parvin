@@ -16,9 +16,4 @@ export function getSingleMovie(id) {
       }
       return response.json();
     })
-}
-
-
-// Error Propagation: By removing the .catch() block in the getMovies() and getSingleMovie() functions, you've allowed the error to propagate up to the useEffect() where it's caught and then used to set the error state.
-
-// Centralized Error Handling: Centralizing your error handling allows you to manage all types of errors in one place. It makes it easier to show error messages or error pages.
+};

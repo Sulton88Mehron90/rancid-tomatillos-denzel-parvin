@@ -14,8 +14,8 @@ html {
 
 .spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   border-left-color: #E50914;
   animation: spin 1s linear infinite;
