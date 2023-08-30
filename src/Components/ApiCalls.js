@@ -6,9 +6,6 @@ export function getMovies() {
       }
       return response.json();
     })
-    // .catch(error => {
-    //   console.error("There was a problem with the fetch operation:", error);
-    // });
 }
 
 export function getSingleMovie(id) {
@@ -19,9 +16,6 @@ export function getSingleMovie(id) {
       }
       return response.json();
     })
-    // .catch(error => {
-    //   console.error("There was a problem with the fetch operation:", error);
-    // });
 }
 
 
