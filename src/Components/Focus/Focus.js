@@ -37,7 +37,7 @@ function Focus() {
     <div id="focus-container" style={{
       backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${singleMovie.backdrop_path}')`
     }}>
-      <div id="focus-text-content">
+      <div className="focus-text-content" id="focus-text-content">
       <h2>{singleMovie.title}</h2>
         <h3>{singleMovie.tagline}</h3>
         <p><span className="label">overview:</span> {singleMovie.overview}</p>

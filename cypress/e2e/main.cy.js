@@ -24,14 +24,15 @@ describe('Main User Flow', () => {
       fixture: 'movie436270.json'
     }).as('getMovie');
     
-  //   cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
+    cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
     
-  //   cy.get('h2').should('contain', 'Black Adam');
-  //   cy.get('.label').contains('overview:').should('be.visible');
-  //   cy.get('.label').contains('average rating:').should('be.visible');
-  //   cy.get('.label').contains('runtime:').should('be.visible');
-  //   cy.get('.label').contains('genre(s):').should('be.visible');
-  //   cy.get('.label').contains('release date:').should('be.visible');
+    cy.get('h2').should('contain', 'Black Adam');
+    cy.get('.focus-text-content').contains('h3', 'The world needed a hero. It got Black Adam.')
+    cy.get('.focus-text-content').contains('p', 'overview: Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.')
+    cy.get('.focus-text-content').contains('p', 'average rating: 4/10')
+    cy.get('.focus-text-content').contains('p', 'runtime: 125 minutes')
+    cy.get('.focus-text-content').contains('p', 'genre(s): Action, Fantasy, Science Fiction')
+    cy.get('.focus-text-content').contains('p', 'release date: 2022-10-19')
   });
  
   it('should allow the user to navigate back to all movies by clicking the back button', () => {
