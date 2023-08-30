@@ -8,7 +8,7 @@
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   align-items: flex-start;
-  overflow: auto;
+  overflow: visible;
 }
 
 #focus-text-content *:focus {
@@ -136,10 +136,6 @@
   width: 14px;
   height: 2px;
 }
-
-/* #focus-container button:hover {
-  border-color: rgb(247, 7, 7);
-} */
 
 #focus-container button:hover:before,
 #focus-container button:hover:after {
