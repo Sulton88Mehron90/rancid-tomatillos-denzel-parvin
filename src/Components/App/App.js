@@ -17,6 +17,15 @@ function App() {
   const [filter, setFilter] = useState([]);
   const [searchVisible, setSearchVisible]= useState(false);
 
+  function clearInput(){
+    setSearch("");
+  };
+
+  function toggleSearch() {
+    clearInput();
+    setSearchVisible(true);
+  }
+
   useEffect(() => {
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
     setFilter(filteredMovies);
@@ -79,7 +88,7 @@ function App() {
         }>
         </Route>
         <Route path="/movies/:id" element={
-          <Focus />
+          <Focus toggleSearch={toggleSearch}/>
         }>
         </Route>
         <Route path="/404" element={
