@@ -35,3 +35,9 @@
     background-color: #FFC300;
   }
   
+  @media (max-width: 768px) {
+    .error-page-container {
+      padding-top: 100px;
+    }
+  }
+  

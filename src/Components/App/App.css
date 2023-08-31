@@ -35,4 +35,8 @@ html {
   body {
     font-size: 14px;
   }
+  
+  .main-container {
+    padding: 10px;
+  }
 }

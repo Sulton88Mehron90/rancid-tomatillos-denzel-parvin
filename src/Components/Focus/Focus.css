@@ -22,17 +22,18 @@
 #focus-text-content {
   background: transparent;
   padding-left: 20px;
-  padding-top: 300px; 
+  padding-top: 300px;
   margin-right: 30px;
   flex: 1;
 }
 
 .label {
-  font-weight: bold; 
-  color: #FFD700; 
+  font-weight: bold;
+  color: #FFD700;
 }
 
-#focus-container h2, #focus-container h3 {
+#focus-container h2,
+#focus-container h3 {
   margin: 0;
   padding: 10px;
   font-size: 2rem;
@@ -43,11 +44,11 @@
   font-size: 1.2rem;
 }
 
-#focus-text-content, 
+#focus-text-content,
 #focus-container img {
-  border: none; 
-  margin: 0; 
-  background-color: transparent; 
+  border: none;
+  margin: 0;
+  background-color: transparent;
   box-sizing: border-box;
 }
 
@@ -82,7 +83,7 @@
   border: 3px solid rgb(11, 166, 52);
   border-radius: 50%;
   padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
   transform-origin: right;
 }
 
@@ -91,7 +92,6 @@
   border: none;
   box-shadow: 0px 0px 15px 5px rgb(229, 217, 217);
   margin-right: 40px;
-  /* margin-bottom: 100px; */
 }
 
 #focus-container img:active {
@@ -99,8 +99,9 @@
   box-shadow: none;
 }
 
-#focus-text-content, #focus-container {
-  border: none !important; 
+#focus-text-content,
+#focus-container {
+  border: none !important;
   outline: none !important;
 }
 
@@ -109,7 +110,6 @@
   width: 80px;
   height: 40px;
   background-color: transparent;
-  /* border: 2px solid white; */
   cursor: pointer;
   position: relative;
 }
@@ -142,37 +142,151 @@
   border-color: rgb(11, 239, 42);
 }
 
-/* For tablet and mobile screens */
 @media screen and (max-width: 768px) {
   #focus-container {
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
-  
+
   #focus-text-content {
-    padding-top: 100px;
+    padding-top: 5%;
     margin-right: 0;
     text-align: center;
   }
 
+  #focus-container h2,
+  #focus-container h3,
+  #focus-container p {
+    font-size: 1rem;
+  }
+
   #focus-container img {
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 4px;
   }
-  
+
   #focus-container button {
-    width: 60px;
-    height: 30px;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: auto;
+    align-self: flex-start;
+    z-index: 1000;
+  }
+}
+
+/* Common styles for all media queries */
+@media screen and (max-width: 1440px) {
+
+  #focus-container,
+  #focus-text-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
   }
 
-  #focus-container button:before {
-    width: 15px;
-    height: 15px;
+  #focus-container h2,
+  #focus-container h3,
+  #focus-container p {
+    font-size: 1rem;
   }
 
+  #focus-container img {
+    margin-left: auto;
+  }
+
+  #focus-container button {
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  #focus-container button:before,
   #focus-container button:after {
-    width: 10px;
-    height: 1.5px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid rgb(245, 7, 7);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+  }
+
+  #focus-container button:hover:before,
+  #focus-container button:hover:after {
+    border-color: rgb(11, 239, 42);
+  }
+}
+
+/* Custom styles for specific screen sizes */
+@media (max-width: 1440px) {
+  #focus-text-content {
+    padding-top: 50px;
+  }
+
+  #focus-container img {
+    width: 40%;
+    margin-top: 4px;
+    margin-bottom: 35px;
+  }
+
+  #focus-container button {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1424px) {
+  #focus-text-content {
+    padding-top: 50px;
+  }
+
+  #focus-container img {
+    width: 40%;
+    margin-top: 4px;
+    margin-bottom: 31px;
+  }
+}
+
+@media (max-width: 426px) {
+  #focus-text-content {
+    padding-top: 25px;
+  }
+
+  #focus-container img {
+    width: 45%;
+    margin-top: 3px;
+    margin-bottom: 1px;
+  }
+}
+
+@media (max-width: 375px) {
+  #focus-text-content {
+    padding-top: 20px;
+  }
+
+  #focus-container img {
+    width: 30%;
+    margin-top: 2px;
+    margin-bottom: 1px;
+  }
+}
+
+@media (max-width: 320px) {
+  #focus-text-content {
+    padding-top: 15px;
+  }
+
+  #focus-container img {
+    width: 25%;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
 }
