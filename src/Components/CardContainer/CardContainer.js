@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import "../CardContainer/CardContainer.css"
 import PropTypes from 'prop-types';
 
-function CardContainer({movies, search, filter}) {
+function CardContainer({movies, search, filter, toggleSearch}) {
   let allMovies = [];
   let filtered = [];
 
@@ -15,6 +15,7 @@ function CardContainer({movies, search, filter}) {
               img = {filteredMovie.poster_path}
               rating = {filteredMovie.average_rating}
               id = {filteredMovie.id}
+              toggleSearch={toggleSearch}
               />
           </div>
         )  
@@ -28,6 +29,7 @@ function CardContainer({movies, search, filter}) {
             img = {movie.poster_path}
             rating = {movie.average_rating}
             id = {movie.id}
+            toggleSearch={toggleSearch}
           />
         </div>
       )

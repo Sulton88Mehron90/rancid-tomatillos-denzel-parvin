@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function Card({title, img, rating, id}) {
+function Card({title, img, rating, id, toggleSearch}) {
   const [isSelected, setIsSelected] = useState(false);
   const tomatilloImages = Array(Math.floor(rating)).fill(null);
   const cardClass = isSelected ? "glowing-border" : "";
 
   return (
      <Link to={`/movies/${id}`} className="no-underline">
-      <div id={id} className={cardClass} onClick={() => setIsSelected(!isSelected)}>
+      <div id={id} className={cardClass} onClick={toggleSearch}>
         <img id={id} src={img} alt={`Poster of ${title}`} />
         <h3 id={id}>{title}</h3>
         <div className="rating-container">
