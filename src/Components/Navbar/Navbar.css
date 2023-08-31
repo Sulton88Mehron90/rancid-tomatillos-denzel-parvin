@@ -12,12 +12,6 @@
     align-items: center;
   }
 
-  .nav-content {
-    display: flex;
-    height: 60px;
-    align-items: center;
-  }
-
   main {
     background-color: #181818;
     padding-top: 60px;
@@ -37,32 +31,41 @@
     font-weight: bold;
   }
 
-  .nav-logo {
+  .nav-content {
+    display: flex;
+    height: 60px;
+    align-items: center;
+  }
+
+  .nav-title {
+    color: red;
+    margin-top: 26px;
+  }
+
+  .nav-logo,
+  .nav-content a .nav-logo {
     height: 80px;
     width: 80px;
     object-fit: cover;
-    box-shadow: 0 0 10px #fff;
     background-color: rgba(2, 0, 0, 0.3);
     border-radius: 50%;
-    margin-right: 90px;
-    margin-bottom: -90px;
+    margin-right: 100px;
+    margin-bottom: -80px;
     transform: rotate(-15deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .nav-logo {
+    top: -10px;
+    margin-left: 269px;
+    box-shadow: 0 0 10px #fff;
+    transform-origin: center; 
   }
 
   .nav-logo:hover {
     transform: rotate(-15deg) scale(1.1);
     box-shadow: 0 0 20px #fff;
-  }
-
-  .nav-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-    margin-left: 10px;
-    white-space: nowrap;
-    color: red;
-    font-family: 'Georgia', serif;
   }
 
   .welcome-note {
@@ -74,41 +77,46 @@
     text-shadow: 0px 0px 5px #000000;
     font-family: 'Georgia', serif;
   }
-  
-/* For tablet and mobile screens */
-@media (max-width: 768px) {
-  nav {
-    padding: 0 10px; 
-  }
-  
-  nav h1 {
-    font-size: 1.5rem;
+
+  /* For tablet and mobile screens */
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 10px;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    .nav-logo {
+      height: 60px;
+      width: 60px;
+    }
+    
+    .nav-logo:hover {
+      transform: rotate(-15deg) scale(1.1);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    .nav-title {
+      font-size: 1.5rem;
+    }
+
+    .welcome-note {
+      font-size: 1rem;
+      margin-left: auto;
+      text-align: right;
+      flex-grow: 1;
+    }
+
+    .main-container {
+      padding: 15px;
+    }
   }
 
-  .nav-logo {
-    height: 60px;
-    width: 60px;
+  @media (max-width: 480px) {
+    .welcome-note {
+      margin-left: 10px;
+      font-size: 0.9rem;
+    }
   }
-
-  .nav-title {
-    font-size: 1.5rem; 
-  }
-
-  .welcome-note {
-    font-size: 1rem;
-    margin-left: auto; 
-    text-align: right;
-    flex-grow: 1;
-  }
-
-  .main-container {
-    padding: 15px; 
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-note {
-    margin-left: 10px; 
-    font-size: 0.9rem;
-  }
-}
