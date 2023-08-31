@@ -15,7 +15,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState([]);
-  const [searchVisible, setSearchVisible]= useState(false);
+  const [searchVisible, setSearchVisible]= useState(true);
 
   function clearInput(){
     setSearch("");
@@ -23,8 +23,13 @@ function App() {
 
   function toggleSearch() {
     clearInput();
-    setSearchVisible(true);
+    if(searchVisible){  
+      setSearchVisible(false);
+    } else {
+      setSearchVisible(true);
+    }
   }
+  console.log('is visible', searchVisible)
 
   useEffect(() => {
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
@@ -80,11 +85,11 @@ function App() {
 
   return (
     <main>
-      <Navbar search={search} searchFilter={searchFilter} />
+      <Navbar search={search} searchFilter={searchFilter} searchVisible={searchVisible} />
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" className="main-container" element={
-          <CardContainer movies={movies} search={search} filter={filter} />
+          <CardContainer movies={movies} search={search} filter={filter} toggleSearch={toggleSearch}/>
         }>
         </Route>
         <Route path="/movies/:id" element={
