@@ -22,13 +22,17 @@
 /* For tablet screens */
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
   }
 }
 
 /* For mobile screens */
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 10px;  
+    padding: 10px;
   }
 }

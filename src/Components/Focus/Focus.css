@@ -150,15 +150,21 @@
   }
   
   #focus-text-content {
-    padding-top: 100px;
+    padding-top: 50px; 
     margin-right: 0;
     text-align: center;
   }
 
+  #focus-container h2,
+  #focus-container h3,
+  #focus-container p {
+    font-size: 1.5rem;
+  }
+
   #focus-container img {
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    width: 70%;
+    margin-top: 25px; 
+    margin-bottom: 25px;
   }
   
   #focus-container button {
@@ -166,13 +172,9 @@
     height: 30px;
   }
 
-  #focus-container button:before {
-    width: 15px;
-    height: 15px;
-  }
-
+  #focus-container button:before,
   #focus-container button:after {
-    width: 10px;
+    width: 15px;
     height: 1.5px;
   }
 }
