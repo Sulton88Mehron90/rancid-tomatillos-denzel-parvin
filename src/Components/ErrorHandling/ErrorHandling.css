@@ -55,3 +55,24 @@
     background-color: #FFC300;
   }
   
+  /* For tablet and mobile screens */
+@media (max-width: 768px) {
+  .error-handling h3,
+  .error-heading,
+  .fun-fact-heading,
+  .fun-fact {
+    font-size: 80%; 
+  }
+
+  .fun-fact-container {
+    padding: 30px; 
+    width: 80%; 
+  }
+
+  .go-home-button {
+    margin-top: 45px;
+    margin-bottom: 60px;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

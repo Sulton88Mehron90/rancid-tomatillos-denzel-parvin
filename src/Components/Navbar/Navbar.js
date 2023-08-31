@@ -7,9 +7,9 @@ const Navbar = ({search, searchFilter}) => {
     <nav>
       <div className="nav-content">
         <NavLink to="/" style={{textDecoration:'none'}}>
-        <h1 className="nav-title">Rancid Tomatillos</h1>
+          <h1 className="nav-title">Rancid Tomatillos</h1>
+          <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
         </NavLink>
-        <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
         <form>
           <input 
           id="search-input"
