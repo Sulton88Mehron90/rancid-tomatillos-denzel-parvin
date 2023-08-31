@@ -76,7 +76,7 @@ function App() {
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" className="main-container" element={
-          <CardContainer movies={movies} />
+          <CardContainer movies={movies} search={search} filter={filter} />
         }>
         </Route>
         <Route path="/movies/:id" element={
