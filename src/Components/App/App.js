@@ -11,22 +11,23 @@ import Error500 from '../ErrorHandling/Error500';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("");
-  const [searchValue, setSearchValue] = useState("");
+  const [filter, setFilter] = useState([]);
+  const [searchVisible, setSearchVisible]= useState(false);
 
   useEffect(() => {
-    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search))
-    console.log(filteredMovies)
-    setFilter(filteredMovies)
+    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
+    setFilter(filteredMovies);
+    console.log('filteredMovies-array', filteredMovies);
+    console.log('filter state', filter);
   }, [movies, search]);
 
   function searchFilter(event){
-    setSearchValue(event.target.value);
     const searchMovie = event.target.value.toLowerCase();
     setSearch(searchMovie);
+    console.log('search state', search)
   }
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function App() {
       .then(data => {
         if (data && data.movies) {
           setMovies(data.movies);
-          setError('');
+          setError("");
         }
         setIsLoading(false);
       })
@@ -51,8 +52,6 @@ function App() {
         setIsLoading(false);
       });
   }, []);
-
-  // console.log("Data All movies from API:", movies)
 
   if (isLoading) {
     return (
