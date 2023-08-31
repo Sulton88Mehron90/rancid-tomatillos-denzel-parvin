@@ -13,6 +13,21 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true);
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("");
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search))
+    console.log(filteredMovies)
+    setFilter(filteredMovies)
+  }, [movies, search]);
+
+  function searchFilter(event){
+    setSearchValue(event.target.value);
+    const searchMovie = event.target.value.toLowerCase();
+    setSearch(searchMovie);
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -37,7 +52,7 @@ function App() {
       });
   }, []);
 
-  console.log("Data All movies from API:", movies)
+  // console.log("Data All movies from API:", movies)
 
   if (isLoading) {
     return (
@@ -57,7 +72,8 @@ function App() {
 
   return (
     <main>
-      <Navbar />
+      <Navbar search={search} searchFilter={searchFilter} />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" className="main-container" element={
           <CardContainer movies={movies} />
