@@ -47,5 +47,8 @@ function CardContainer({movies, search, filter, toggleSearch}) {
 export default CardContainer;
 
 CardContainer.propTypes = {
-  movies: PropTypes.array.isRequired
+  movies: PropTypes.array.isRequired,
+  search: PropTypes.string.isRequired,
+  filter: PropTypes.array.isRequired,
+  toggleSearch: PropTypes.func.isRequired
 };

@@ -1,6 +1,7 @@
 import './Navbar.css'
 import Tomatillo from '../../images/Tomatillo.png'
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Navbar = ({search, searchFilter, searchVisible}) => {
   if(searchVisible){
@@ -43,3 +44,8 @@ const Navbar = ({search, searchFilter, searchVisible}) => {
 
 export default Navbar;
 
+Navbar.propTypes = {
+  search: PropTypes.string.isRequired,
+  searchFilter: PropTypes.func.isRequired,
+  searchVisible: PropTypes.bool.isRequired
+}

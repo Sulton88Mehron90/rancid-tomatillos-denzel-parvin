@@ -35,5 +35,6 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired
+  id: PropTypes.number.isRequired,
+  toggleSearch: PropTypes.func.isRequired
 }
