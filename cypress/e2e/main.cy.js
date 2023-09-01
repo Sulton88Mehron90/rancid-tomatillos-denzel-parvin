@@ -8,14 +8,11 @@ describe('Main User Flow', () => {
   });
 
   it('should allow the user to view all movies on page load', () => {
-    cy.get('.nav-content')
-      .contains('h1', 'Rancid Tomatillos')
-      .get('img[class="nav-logo"]')
-      .should('be.visible');
-    cy.url()
-      .should('include', '/');
-    cy.get('.movie-card')
-      .should('be.visible');
+    cy.get('.nav-content').contains('h1', 'Rancid Tomatillos')
+    cy.get('img[class="nav-logo"]').should('be.visible');
+    cy.get('#search-input').should('be.visible');
+    cy.url().should('include', '/');
+    cy.get('.movie-card').should('be.visible');
   });
 
   it('should allow the user to click on a movie to see its details', () => {
@@ -25,7 +22,8 @@ describe('Main User Flow', () => {
     }).as('getMovie');
     
     cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
-    
+    cy.url().should('include', '/436270')
+    cy.get('#search-input').should('not.exist')
     cy.get('h2').should('contain', 'Black Adam');
     cy.get('.focus-text-content').contains('h3', 'The world needed a hero. It got Black Adam.')
     cy.get('.focus-text-content').contains('p', 'overview: Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.')
@@ -50,6 +48,14 @@ describe('Main User Flow', () => {
     cy.get('.nav-content').click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
+
+  it('should allow the user to search for movies by title', () => {
+    cy.get('#search-input').type('bl')
+    cy.url().should('include', '/')
+    cy.get('.no-underline > :nth-child(1)').should('be.visible')
+    cy.get('.no-underline > :nth-child(2)').should('not.exist')
+    cy.get('.no-underline > :nth-child(3)').should('not.exist')
+  })
 });
 
 describe('Error Handling', () => {
@@ -67,11 +73,8 @@ describe('Error Handling', () => {
     cy.visit('http://localhost:3000/nonexistentpage');
     cy.contains('404 - Page Not Found').should('be.visible');
     cy.contains("Sorry! That page doesn't seem to exist. Try going back to the home page.").should('be.visible');
+    cy.url().should('include', '/404')
     cy.get('.go-home-button').should('be.visible');
-  });
-
-  it('should display a fun fact on the 404 error page', () => {
-    cy.visit('http://localhost:3000/nonexistentpage');
     cy.get('.fun-fact').should('be.visible');
   });
 });
