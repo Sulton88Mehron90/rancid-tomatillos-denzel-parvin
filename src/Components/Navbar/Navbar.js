@@ -15,6 +15,7 @@ const Navbar = ({search, searchFilter, searchVisible}) => {
           <form>
             <input 
             id="search-input"
+            className="search-input"
             type="text"
             placeholder="Search for movies..."
             name={search}
