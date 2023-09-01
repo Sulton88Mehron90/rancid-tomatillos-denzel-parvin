@@ -80,7 +80,7 @@ function App() {
 
   return (
     <main>
-      <Navbar search={search} searchFilter={searchFilter} searchVisible={searchVisible} />
+      <Navbar search={search} searchFilter={searchFilter} searchVisible={searchVisible} toggleSearch={toggleSearch} />
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" className="main-container" element={

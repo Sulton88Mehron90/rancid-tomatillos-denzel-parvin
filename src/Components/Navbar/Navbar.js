@@ -3,12 +3,12 @@ import Tomatillo from '../../images/Tomatillo.png'
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Navbar = ({search, searchFilter, searchVisible}) => {
+const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   if(searchVisible){
     return (
       <nav>
         <div className="nav-content">
-          <NavLink to="/" style={{textDecoration:'none'}}>
+          <NavLink to="/" style={{textDecoration:'none'}} >
             <h1 className="nav-title">Rancid Tomatillos</h1>
             <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
           </NavLink>
@@ -31,7 +31,7 @@ const Navbar = ({search, searchFilter, searchVisible}) => {
     return (
       <nav>
         <div className="nav-content">
-          <NavLink to="/" style={{textDecoration:'none'}}>
+          <NavLink to="/" style={{textDecoration:'none'}} onClick={toggleSearch}>
             <h1 className="nav-title">Rancid Tomatillos</h1>
             <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
           </NavLink>
@@ -48,5 +48,6 @@ export default Navbar;
 Navbar.propTypes = {
   search: PropTypes.string.isRequired,
   searchFilter: PropTypes.func.isRequired,
-  searchVisible: PropTypes.bool.isRequired
+  searchVisible: PropTypes.bool.isRequired,
+  toggleSearch: PropTypes.func.isRequired
 }
