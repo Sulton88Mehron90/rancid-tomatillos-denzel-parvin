@@ -4,12 +4,11 @@ import { useParams, NavLink } from "react-router-dom";
 import './Focus.css';
 
 
-function Focus() {
+function Focus({toggleSearch}) {
   const [singleMovie, setSingleMovie] = useState({})
   const [singleMovieError, setSingleMovieError] = useState('')
 
   const movieID = useParams();
-  console.log('movieID', movieID)
 
   useEffect(() => {
     getSingleMovie(movieID.id)
@@ -22,10 +21,6 @@ function Focus() {
         }
       })
   }, [movieID.id])
-
-  console.log("singleMovie after Fetch", singleMovie); //console
-
-  console.log(typeof singleMovie.genres, singleMovie.genres); //console
 
   if (singleMovieError) {
     return (
@@ -46,7 +41,7 @@ function Focus() {
         <p><span className="label">genre(s):</span> {singleMovie.genres ? singleMovie.genres.join(', ') : 'N/A'}</p>
         <p><span className="label">release date:</span> {singleMovie.release_date}</p>
         <NavLink to="/">
-          <button className="back-button" aria-label="Go Back"></button>
+          <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
         </NavLink>
       </div>
       <img src={singleMovie.backdrop_path} alt={singleMovie.title} />

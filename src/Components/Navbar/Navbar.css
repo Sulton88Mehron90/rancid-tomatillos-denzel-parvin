@@ -78,6 +78,13 @@
     font-family: 'Georgia', serif;
   }
 
+  .search-input {
+    width: 20vw;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
   /* For tablet and mobile screens */
   @media (max-width: 768px) {
     nav {
