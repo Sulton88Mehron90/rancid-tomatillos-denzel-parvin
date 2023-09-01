@@ -43,7 +43,7 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
           </NavLink>
           <div className="search-container">
             <form>
-              <input 
+              <input aria-label="Search for movies"
               id="search-input"
               className="search-input"
               type="text"
@@ -73,11 +73,11 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   }
 }
 
-export default Navbar;
-
 Navbar.propTypes = {
   search: PropTypes.string.isRequired,
   searchFilter: PropTypes.func.isRequired,
   searchVisible: PropTypes.bool.isRequired,
   toggleSearch: PropTypes.func.isRequired
 }
+
+export default Navbar;

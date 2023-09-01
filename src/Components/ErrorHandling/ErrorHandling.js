@@ -27,9 +27,9 @@ function ErrorHandling() {
         </h3>
       </div>
       <NavLink to="/" style={{ textDecoration: 'none' }}>
-        <button className="go-home-button">Go Back to Home Page</button>
+        <button className="go-home-button" aria-label="Go back to the home page">Go Back to Home Page</button>
       </NavLink>
-      <div className="fun-fact-container">
+      <div className="fun-fact-container" aria-label="Fun movie fact">
         <h4 className="fun-fact-heading">Here's a movie fun fact to cheer you up:</h4>
         <p className="fun-fact">{funFact}</p>
       </div>
