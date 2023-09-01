@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Tomatillo from '../../images/Tomatillo.png';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Navbar = ({ search, searchFilter }) => {
+const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   // Logic for setting the day message
   const [dayMessage, setDayMessage] = useState('');
   useEffect(() => {
@@ -31,30 +32,52 @@ const Navbar = ({ search, searchFilter }) => {
 
     setDayMessage(morning ? `Good Morning! ${message}` : `Good Afternoon! ${message}`);
   }, []);
-
-  return (
-    <nav>
-      <div className="nav-content">
-        <NavLink to="/" style={{ textDecoration: 'none' }}>
-          <h1 className="nav-title">Rancid Tomatillos</h1>
-          <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
-        </NavLink>
-        <div className="search-container">
-          <form className="search-form">
-            <input
+  
+  if(searchVisible){
+    return (
+      <nav>
+        <div className="nav-content">
+          <NavLink to="/" style={{textDecoration:'none'}} >
+            <h1 className="nav-title">Rancid Tomatillos</h1>
+            <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
+          </NavLink>
+          <div className="search-container">
+            <form>
+              <input 
               id="search-input"
+              className="search-input"
               type="text"
               placeholder="Search for movies..."
               name={search}
               value={search}
               onChange={searchFilter}
-            />
-          </form>
+              />
+            </form>
+          </div>
+          <span className="welcome-note">{dayMessage}</span>
         </div>
-        <span className="welcome-note">{dayMessage}</span>
-      </div>
-    </nav>
-  );
-};
+      </nav>
+    );
+  } else {
+    return (
+      <nav>
+        <div className="nav-content">
+          <NavLink to="/" style={{textDecoration:'none'}} onClick={toggleSearch}>
+            <h1 className="nav-title">Rancid Tomatillos</h1>
+            <img src={Tomatillo} className="nav-logo" alt="Tomatillo logo" />
+          </NavLink>
+          <span className="welcome-note">{dayMessage}</span>
+        </div>
+      </nav>
+    );
+  }
+}
 
 export default Navbar;
+
+Navbar.propTypes = {
+  search: PropTypes.string.isRequired,
+  searchFilter: PropTypes.func.isRequired,
+  searchVisible: PropTypes.bool.isRequired,
+  toggleSearch: PropTypes.func.isRequired
+}

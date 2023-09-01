@@ -113,6 +113,13 @@
     color: rgba(255, 255, 255, 0.7);
   }
 
+  .search-input {
+    width: 20vw;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
   /* For tablet and mobile screens */
   @media (max-width: 768px) {
     nav {
