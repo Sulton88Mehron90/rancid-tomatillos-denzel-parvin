@@ -23,7 +23,7 @@ describe('Main User Flow', () => {
     
     cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
     cy.url().should('include', '/436270')
-    cy.get('#search-input').should('not.exist')
+    cy.get('#search-input').should('not.exist');
     cy.get('h2').should('contain', 'Black Adam');
     cy.get('.focus-text-content').contains('h3', 'The world needed a hero. It got Black Adam.')
     cy.get('.focus-text-content').contains('p', 'overview: Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.')
@@ -35,18 +35,20 @@ describe('Main User Flow', () => {
  
   it('should allow the user to navigate back to all movies by clicking the back button', () => {
     cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
-
     cy.get('.back-button', { timeout: 10000 }).click();
     cy.url().should('eq', 'http://localhost:3000/');
   });
 
-  it('should display the title when navigated back to the home page', () => {
-    cy.get('.nav-content').should('be.visible');
-  });
-
-  it('should navigate back to the home page when clicking the title', () => {
-    cy.get('.nav-content').click();
+  it('should navigate back to the home page when clicking the title or logo', () => {
+    cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
+    cy.url().should('include', '/436270');
+    cy.get('#search-input').should('not.exist');
+    cy.get('.nav-title').click();
     cy.url().should('eq', 'http://localhost:3000/');
+    cy.get('[src="https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"]').click();
+    cy.get('.nav-logo').click();
+    cy.url().should('eq', 'http://localhost:3000/');
+    cy.get('#search-input').should('be.visible');
   });
 
   it('should allow the user to search for movies by title', () => {
