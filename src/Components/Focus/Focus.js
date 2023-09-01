@@ -9,7 +9,6 @@ function Focus({toggleSearch}) {
   const [singleMovieError, setSingleMovieError] = useState('')
 
   const movieID = useParams();
-  console.log('movieID', movieID)
 
   useEffect(() => {
     getSingleMovie(movieID.id)
@@ -22,10 +21,6 @@ function Focus({toggleSearch}) {
         }
       })
   }, [movieID.id])
-
-  console.log("singleMovie after Fetch", singleMovie); //console
-
-  console.log(typeof singleMovie.genres, singleMovie.genres); //console
 
   if (singleMovieError) {
     return (

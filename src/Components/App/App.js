@@ -29,19 +29,15 @@ function App() {
       setSearchVisible(true);
     }
   }
-  console.log('is visible', searchVisible)
 
   useEffect(() => {
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
     setFilter(filteredMovies);
-    console.log('filteredMovies-array', filteredMovies);
-    console.log('filter state', filter);
   }, [movies, search]);
 
   function searchFilter(event){
     const searchMovie = event.target.value.toLowerCase();
     setSearch(searchMovie);
-    console.log('search state', search)
   }
 
   useEffect(() => {
@@ -55,7 +51,6 @@ function App() {
         setIsLoading(false);
       })
       .catch(error => {
-        console.log('Caught error:', error.message);  // console
         if (error.message === '500') {
           setError('500');
         } else if (error.message === '404') {
