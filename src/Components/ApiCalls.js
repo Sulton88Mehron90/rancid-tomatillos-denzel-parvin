@@ -19,3 +19,13 @@ export function getSingleMovie(id) {
       return response.json();
     })
 };
+
+export function getSingleMovieVideos(id) {
+  return fetch(`${API_ENDPOINT}${id}/videos`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.status.toString());
+      }
+      return response.json();
+    });
+}

@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   // Logic for setting the day message
   const [dayMessage, setDayMessage] = useState('');
+
   useEffect(() => {
+    console.log("useEffect ran");
     const time = new Date();
     const day = time.toLocaleString('en-US', { weekday: 'long' });
     const morning = time.getHours() >= 6 && time.getHours() <= 12;
