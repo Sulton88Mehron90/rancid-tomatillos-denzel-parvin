@@ -23,7 +23,11 @@ function App() {
 
   function toggleSearch() {
     clearInput();
-    setSearchVisible(!searchVisible);
+    if(searchVisible){  
+      setSearchVisible(false);
+    } else {
+      setSearchVisible(true);
+    }
   }
 
   function handleError(error) {
