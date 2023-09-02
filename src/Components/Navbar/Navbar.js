@@ -9,11 +9,21 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   const [dayMessage, setDayMessage] = useState('');
   useEffect(() => {
     const time = new Date();
+    const hour = time.getHours();
     const day = time.toLocaleString('en-US', { weekday: 'long' });
-    const morning = time.getHours() >= 6 && time.getHours() <= 12;
-
+    
+    let timeOfDay;
+    if (hour >= 6 && hour < 12) {
+      timeOfDay = 'Good Morning';
+    } else if (hour >= 12 && hour < 18) {
+      timeOfDay = 'Good Afternoon';
+    } else if (hour >= 18 && hour < 21) {
+      timeOfDay = 'Good Evening';
+    } else {
+      timeOfDay = 'Good Night';
+    }
+  
     let message;
-
     if (day.toLowerCase() === 'monday') {
       message = `Happy ${day}! How about a comedy to start the week?`;
     } else if (day.toLowerCase() === 'tuesday') {
@@ -29,8 +39,8 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
     } else {
       message = 'Easy like Sunday morning... perfect for a film marathon!';
     }
-
-    setDayMessage(morning ? `Good Morning! ${message}` : `Good Afternoon! ${message}`);
+  
+    setDayMessage(`${timeOfDay}! ${message}`);
   }, []);
   
   if(searchVisible){
@@ -43,7 +53,7 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
           </NavLink>
           <div className="search-container">
             <form>
-              <input 
+              <input aria-label="Search for movies"
               id="search-input"
               className="search-input"
               type="text"
@@ -73,11 +83,11 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   }
 }
 
-export default Navbar;
-
 Navbar.propTypes = {
   search: PropTypes.string.isRequired,
   searchFilter: PropTypes.func.isRequired,
   searchVisible: PropTypes.bool.isRequired,
   toggleSearch: PropTypes.func.isRequired
 }
+
+export default Navbar;

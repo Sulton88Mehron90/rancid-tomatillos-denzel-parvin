@@ -15,11 +15,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState([]);
-  const [searchVisible, setSearchVisible]= useState(true);
+  const [searchVisible, setSearchVisible] = useState(true);
 
-  function clearInput(){
+  function clearInput() {
     setSearch("");
-  };
+  }
 
   function toggleSearch() {
     clearInput();
@@ -30,12 +30,25 @@ function App() {
     }
   }
 
+  function handleError(error) {
+    if (error.message === '500') {
+      setError('500');
+    } else if (error.message === '404') {
+      setError('404');
+    } else {
+      setError('Other');
+    }
+    setIsLoading(false);
+  }
+
+  // Update the 'filter' state whenever 'movies' or 'search' state changes.
   useEffect(() => {
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
     setFilter(filteredMovies);
   }, [movies, search]);
 
-  function searchFilter(event){
+  // Update the 'search' state based on the user's input in the search box.
+  function searchFilter(event) {
     const searchMovie = event.target.value.toLowerCase();
     setSearch(searchMovie);
   }
@@ -50,24 +63,11 @@ function App() {
         }
         setIsLoading(false);
       })
-      .catch(error => {
-        if (error.message === '500') {
-          setError('500');
-        } else if (error.message === '404') {
-          setError('404');
-        } else {
-          setError('Other');
-        }
-        setIsLoading(false);
-      });
+      .catch(handleError);
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="loading">
-        <div className="spinner"></div>
-      </div>
-    );
+    return <div className="loading"><div className="spinner"></div></div>;
   }
 
   if (error === '404') {
@@ -81,21 +81,13 @@ function App() {
   return (
     <main>
       <Navbar search={search} searchFilter={searchFilter} searchVisible={searchVisible} toggleSearch={toggleSearch} />
-      {/* <Navbar /> */}
       <Routes>
         <Route path="/" className="main-container" element={
-          <CardContainer movies={movies} search={search} filter={filter} toggleSearch={toggleSearch}/>
-        }>
-        </Route>
-        <Route path="/movies/:id" element={
-          <Focus toggleSearch={toggleSearch}/>
-        }>
-        </Route>
-        <Route path="/404" element={
-          <ErrorHandling />
-        }>
-        </Route>
-        <Route path="*" element={<Navigate to="/404" />}></Route>
+          <CardContainer movies={movies} search={search} filter={filter} toggleSearch={toggleSearch} />
+        } />
+        <Route path="/movies/:id" element={<Focus toggleSearch={toggleSearch} />} />
+        <Route path="/404" element={<ErrorHandling />} />
+        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </main>
   )
