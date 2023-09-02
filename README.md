@@ -71,8 +71,33 @@ The primary objectives of this project are as follows:
 
 ### 🤝🏼 Contributors
 
-- [Denzel Turambi](https://github.com/Denzel-Turambi)
-- [Parvin A. Sattorova](https://github.com/Sulton88Mehron90)
+<!-- - [Denzel Turambi](https://github.com/Denzel-Turambi)
+- [Parvin A. Sattorova](https://github.com/Sulton88Mehron90) -->
+
+<table>
+    <tr>
+        <td> Denzel Turambi
+            <a href="https://www.linkedin.com/in/denzel-turambi-71a298267/">LinkedIn</a> || 
+            <a href="https://github.com/Denzel-Turambi">GitHub</a> 
+        </td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/Denzel-Turambi.png" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td> Parvin A. Sattorova 
+            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
+            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
+        </td>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
 
 ---
 
