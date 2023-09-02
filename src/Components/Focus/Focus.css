@@ -153,11 +153,11 @@
 }
 
 .active .play-icon {
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent #FFD700;
 }
 
 .green {
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent #FFD700;
 }
 
 .trailer-button {
@@ -207,8 +207,8 @@
     margin-top: 5px;
     margin-bottom: 4px;
   }
-/* 
-   #focus-container button {
+
+  .back-button {
     margin-top: 10px;
     width: 40px;
     height: 40px;
@@ -219,7 +219,7 @@
     top: auto;
     align-self: flex-start;
     z-index: 1000;
-  } */
+  }
 } 
 
 /* Common styles for all media queries */
@@ -243,14 +243,14 @@
     margin-left: auto;
   }
 
-  /* #focus-container button {
+  .back-button {
     margin-top: 20px;
     cursor: pointer;
     position: relative;
-  } */
+  }
 
-  /* #focus-container button:before,
-  #focus-container button:after {
+  .back-button:before,
+  .back-button:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -258,12 +258,12 @@
     border: solid rgb(245, 7, 7);
     border-width: 0 2px 2px 0;
     display: inline-block;
-  } */
+  }
 
-  /* #focus-container button:hover:before,
-  #focus-container button:hover:after {
+  .back-button:hover:before,
+  .back-button:hover:after {
     border-color: rgb(11, 239, 42);
-  } */
+  }
 }
 
 /* Custom styles for specific screen sizes */
@@ -277,11 +277,11 @@
     margin-top: 4px;
     margin-bottom: 35px;
   }
-/* 
-  #focus-container button {
+
+  .back-button {
     width: 80px;
     height: 40px;
-  } */
+  }
 }
 
 @media (max-width: 1424px) {
