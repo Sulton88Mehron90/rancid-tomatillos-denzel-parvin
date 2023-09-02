@@ -2,7 +2,7 @@
   <h1 style="color:red;">
     Rancid Tomatillos
     <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/>
-    <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png"
+    <!-- <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" -->
          alt="Red Tomato Logo" width="50" style="vertical-align:middle"/>
   </h1>
 </div>
@@ -72,7 +72,7 @@ The primary objectives of this project are as follows:
 ### 🤝🏼 Contributors
 
 - [Denzel Turambi](https://github.com/Denzel-Turambi)
-- [Parvin Sattorova](https://github.com/Sulton88Mehron90)
+- [Parvin A. Sattorova](https://github.com/Sulton88Mehron90)
 
 ---
 
