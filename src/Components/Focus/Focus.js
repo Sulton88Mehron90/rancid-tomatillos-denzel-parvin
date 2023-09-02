@@ -7,7 +7,7 @@ function Focus({ toggleSearch }) {
   const [singleMovie, setSingleMovie] = useState({});
   const [singleMovieVideos, setSingleMovieVideos] = useState([]);
   const [singleMovieError, setSingleMovieError] = useState("");
-  const [showVideo, setShowVideo] = useState(false); // State to track whether to show the video
+  const [showVideo, setShowVideo] = useState(false);
 
   const movieID = useParams();
 
@@ -20,10 +20,10 @@ function Focus({ toggleSearch }) {
     getSingleMovie(movieID.id)
       .then(data => {
         setSingleMovie(data.movie);
-        return getSingleMovieVideos(movieID.id);  // Fetch movie videos after setting movie data
+        return getSingleMovieVideos(movieID.id);
       })
       .then(data => {
-        setSingleMovieVideos(data.videos); // Assuming videos are under "videos" key in response
+        setSingleMovieVideos(data.videos);
       })
       .catch(handleError);
   }, [movieID.id]);
@@ -48,6 +48,7 @@ function Focus({ toggleSearch }) {
       backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${singleMovie.backdrop_path}')`
     }}>
       <div className="focus-text-content" id="focus-text-content">
+
         <h2>{singleMovie.title}</h2>
         <h3>{singleMovie.tagline}</h3>
         <p><span className="label">overview:</span> {singleMovie.overview}</p>
@@ -56,16 +57,16 @@ function Focus({ toggleSearch }) {
         <p><span className="label">genre(s):</span> {singleMovie.genres ? singleMovie.genres.join(", ") : "N/A"}</p>
         <p><span className="label">release date:</span> {singleMovie.release_date}</p>
 
-        <NavLink to="/">
-          <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
-        </NavLink>
-
         <div className="button-container">
           <button className={`trailer-button ${showVideo ? "active" : ""}`} onClick={handleTrailerButtonClick}>
             <span className={`play-icon ${showVideo ? "green" : ""}`}></span>
             {showVideo ? "Close Trailer" : "Watch Trailer"}
           </button>
         </div>
+
+        <NavLink to="/">
+          <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
+        </NavLink>
 
 
       </div>

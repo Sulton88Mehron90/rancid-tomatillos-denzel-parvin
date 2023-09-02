@@ -153,7 +153,7 @@
 }
 
 .active .play-icon {
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent white;;
 }
 
 .green {
@@ -162,9 +162,10 @@
 
 .trailer-button {
   margin-top: 20px;
-  margin-left: 70%;
+  /* margin-left: 70%; */
+  margin-left: 35%;
   padding: 15px 30px;
-  background-color: #e50914;
+  background-color: rgb(133, 5, 5);
   color: #FFD700;
   cursor: pointer;
   border: none;
