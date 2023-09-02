@@ -8,7 +8,6 @@ const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
   // Logic for setting the day message
   const [dayMessage, setDayMessage] = useState('');
   useEffect(() => {
-    console.log("useEffect ran");
     const time = new Date();
     const hour = time.getHours();
     const day = time.toLocaleString('en-US', { weekday: 'long' });
