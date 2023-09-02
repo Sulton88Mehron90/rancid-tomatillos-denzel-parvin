@@ -16,7 +16,6 @@ function Focus({ toggleSearch }) {
   };
 
   useEffect(() => {
-    // Fetch movie details
     getSingleMovie(movieID.id)
       .then(data => {
         setSingleMovie(data.movie);
@@ -63,15 +62,11 @@ function Focus({ toggleSearch }) {
             {showVideo ? "Close Trailer" : "Watch Trailer"}
           </button>
         </div>
-
         <NavLink to="/">
           <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
         </NavLink>
-
-
       </div>
       <img src={singleMovie.backdrop_path} alt={singleMovie.title} />
-
       {showVideo && (
         <div className="video-container">
           {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
@@ -86,7 +81,6 @@ function Focus({ toggleSearch }) {
       )}
     </div>
   );
-
-}
+};
 
 export default Focus;
