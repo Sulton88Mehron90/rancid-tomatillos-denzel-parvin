@@ -182,20 +182,52 @@
   color: #fff;
 }
 
-/* For tablet and mobile screens */ 
-@media screen and (max-width: 768px) {
+/* Mobile screens */
+@media screen and (max-width: 320px) {
+  #focus-text-content {
+    padding-top: 15px;
+  }
 
   .trailer-button {
-    font-size: 1rem;
-    padding: 10px 20px;
-    margin-left: 50%;
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    margin-left: 30%;
   }
-  
-  .video-container .trailer-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+
+  #focus-container img {
+    width: 25%;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #focus-text-content {
+    padding-top: 20px;
+  }
+
+  #focus-container img {
+    width: 30%;
+    margin-top: 2px;
+    margin-bottom: 1px;
+  }
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 426px) {
+  #focus-text-content {
+    padding-top: 25px;
+  }
+
+  #focus-container img {
+    width: 45%;
+    margin-top: 3px;
+    margin-bottom: 1px;
+  }
+}
+
+/* For tablet and mobile screens */
+@media screen and (min-width: 427px) and (max-width: 768px) {
 
   #focus-container {
     flex-direction: column;
@@ -207,6 +239,34 @@
     padding-top: 5%;
     margin-right: 0;
     text-align: center;
+    z-index: 1!important;
+  }
+
+  #focus-container img {
+    flex: none;
+    width: 20%;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-left: 350px;
+    z-index: 0;
+  }
+
+  .trailer-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    margin-left: 40%;
+    z-index: 2;
+    position: relative;
+    bottom: -9px;
+  }
+
+  .video-container {
+    top: 65%;
+  }
+
+  .video-container iframe {
+    width: 280px;  
+    height: 157.5px;
   }
 
   #focus-container h2,
@@ -215,28 +275,47 @@
     font-size: 1rem;
   }
 
-  #focus-container img {
-    width: 20%;
-    margin-top: 5px;
-    margin-bottom: 4px;
-  }
-
   .back-button {
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
+    width: 70px !important;
+    height: 30px !important;
+    z-index: 3 !important;
+    margin-top: 20px; 
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    left: 0;
-    top: auto;
     align-self: flex-start;
-    z-index: 1000;
-  }
-} 
+  } 
 
-/* Common styles for all media queries */
-@media screen and (max-width: 1440px) {
+  .back-button:before,
+  .back-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+  }
+  
+  .back-button:before {
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .back-button:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 14px;
+    height: 2px;
+  }
+  
+  .back-button:hover:before,
+  .back-button:hover:after {
+    border-color: rgb(11, 239, 42);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
 
   #focus-container,
   #focus-text-content {
@@ -277,74 +356,4 @@
   .back-button:hover:after {
     border-color: rgb(11, 239, 42);
   }
-}
-
-/* Custom styles for specific screen sizes */
-@media (max-width: 1440px) {
-  #focus-text-content {
-    padding-top: 50px;
-  }
-
-  #focus-container img {
-    width: 40%;
-    margin-top: 4px;
-    margin-bottom: 35px;
-  }
-
-  .back-button {
-    width: 80px;
-    height: 40px;
-  }
-}
-
-@media (max-width: 1424px) {
-  #focus-text-content {
-    padding-top: 50px;
-  }
-
-  #focus-container img {
-    width: 40%;
-    margin-top: 4px;
-    margin-bottom: 31px;
-  }
-}
-
-@media (max-width: 426px) {
-  #focus-text-content {
-    padding-top: 25px;
-  }
-
-  #focus-container img {
-    width: 45%;
-    margin-top: 3px;
-    margin-bottom: 1px;
-  }
-}
-
-@media (max-width: 375px) {
-  #focus-text-content {
-    padding-top: 20px;
-  }
-
-  #focus-container img {
-    width: 30%;
-    margin-top: 2px;
-    margin-bottom: 1px;
-  }
-}
-
-@media (max-width: 320px) {
-  #focus-text-content {
-    padding-top: 15px;
-  }
-  .trailer-button {
-    font-size: 0.8rem;
-    padding: 8px 16px;
-    margin-left: 30%;
-  }
-  #focus-container img {
-    width: 25%;
-    margin-top: 1px;
-    margin-bottom: 1px;
-  }
-}
+};
