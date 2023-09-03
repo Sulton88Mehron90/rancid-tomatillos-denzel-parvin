@@ -55,12 +55,13 @@ function Focus({ toggleSearch }) {
         <p><span className="label">runtime:</span> {singleMovie.runtime} minutes</p>
         <p><span className="label">genre(s):</span> {singleMovie.genres ? singleMovie.genres.join(", ") : "N/A"}</p>
         <p><span className="label">release date:</span> {singleMovie.release_date}</p>
-
         <div className="button-container">
-          <button className={`trailer-button ${showVideo ? "active" : ""}`} onClick={handleTrailerButtonClick}>
-            <span className={`play-icon ${showVideo ? "green" : ""}`}></span>
-            {showVideo ? "Close Trailer" : "Watch Trailer"}
-          </button>
+          {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
+            <button className={`trailer-button ${showVideo ? "active" : ""}`} onClick={handleTrailerButtonClick}>
+              <span className={`play-icon ${showVideo ? "green" : ""}`}></span>
+              {showVideo ? "Close Trailer" : "Watch Trailer"}
+            </button>
+          )}
         </div>
         <NavLink to="/">
           <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
