@@ -2,9 +2,9 @@
   <h1 style="color:red;">
     Rancid Tomatillos
     <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/>
-  <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
+<img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
      alt="Red Tomato Logo" 
-     style="width: 60%; margin-top: 100px; margin-bottom: 100px; margin-right: 35px; border: 3px solid rgb(11, 166, 52); border-radius: 50%; padding: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
+     style="width: 50px; margin-top: 100px; margin-bottom: 100px; margin-right: 35px; border: 3px solid rgb(11, 166, 52); border-radius: 50%; padding: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
   </h1>
 </div>
 
