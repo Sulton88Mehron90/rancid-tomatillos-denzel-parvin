@@ -2,8 +2,9 @@
   <h1 style="color:red;">
     Rancid Tomatillos
     <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/>
-    <!-- <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png"
-         alt="Red Tomato Logo" width="50" style="vertical-align:middle"/> -->
+  <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
+     alt="Red Tomato Logo" 
+     style="width: 60%; margin-top: 100px; margin-bottom: 100px; margin-right: 35px; border: 3px solid rgb(11, 166, 52); border-radius: 50%; padding: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
   </h1>
 </div>
 
@@ -62,18 +63,18 @@ The primary objectives of this project are as follows:
 - Learn to integrate APIs to fetch data, handle network requests efficiently, manage state, and implement error-handling mechanisms.
 
 ---
-
+<!-- 
 ### 👁️‍🗨️ Preview of App
 
 ![App Preview](#)
 
----
+--- -->
 
 ### 🤝🏼 Contributors
 
 <!-- - [Denzel Turambi](https://github.com/Denzel-Turambi)
 - [Parvin A. Sattorova](https://github.com/Sulton88Mehron90) -->
-
+<!-- 
 <table>
     <tr>
         <td> Denzel Turambi
@@ -93,6 +94,33 @@ The primary objectives of this project are as follows:
             <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
             <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
         </td>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table> -->
+
+<table>
+    <tr>
+        <td> Denzel Turambi
+            <a href="https://www.linkedin.com/in/denzel-turambi-71a298267/">LinkedIn</a> || 
+            <a href="https://github.com/Denzel-Turambi">GitHub</a> 
+        </td>
+        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/Denzel-Turambi.png" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td> Parvin A. Sattorova 
+            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
+            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
+        </td>
+        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
     </tr>
     <tr>
         <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
