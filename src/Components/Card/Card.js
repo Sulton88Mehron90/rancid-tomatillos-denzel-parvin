@@ -5,15 +5,12 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function Card({ title, img, rating, id, toggleSearch }) {
-  const [isSelected, setIsSelected] = useState(false);
   const tomatilloImages = Array(Math.floor(rating)).fill(null);
-  const cardClass = isSelected ? "glowing-border" : "";
 
   return (
     <Link to={`/movies/${id}`} className="no-underline">
-      <div 
-        id={id} 
-        className={cardClass} 
+      <div
+        id={id}
         onClick={toggleSearch}
         role="button"
         aria-label={`Click to see details for movie ${title}`}
@@ -22,10 +19,10 @@ function Card({ title, img, rating, id, toggleSearch }) {
         <h3 id={id}>{title}</h3>
         <div className="rating-container">
           {tomatilloImages.map((_, index) => (
-            <img 
+            <img
               key={`${id}-${index}`}
-              src={Tomatillo} 
-              style={{ width: '25px', height: '25px' }} 
+              src={Tomatillo}
+              style={{ width: '25px', height: '25px' }}
               alt="Tomatillo rating logo"
             />
           ))}

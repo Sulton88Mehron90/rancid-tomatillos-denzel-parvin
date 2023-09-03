@@ -59,7 +59,7 @@ The primary objectives of this project are as follows:
 - Utilize React Router to design a multi-page user experience with seamless navigation, dynamic routing, and conditional rendering.
 
 ### API Integration and Data Handling
-- Learn to integrate real-world APIs to fetch data, handle network requests efficiently, manage state, and implement error-handling mechanisms.
+- Learn to integrate APIs to fetch data, handle network requests efficiently, manage state, and implement error-handling mechanisms.
 
 ---
 
