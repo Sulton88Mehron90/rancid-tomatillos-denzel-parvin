@@ -1,4 +1,4 @@
-<div align="center">
+ <!--<div align="center">-->
 <div>
   <h1 style="color:red; display: inline;">
     Rancid Tomatillos
@@ -7,10 +7,6 @@
        width="50" 
        style="vertical-align: middle; display: inline;" />
   </h1
-
-  <!-- <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
-       alt="Red Tomato Logo" 
-       style="width: 30px; margin-left: 10px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle; display: inline;" /> -->
 </div>
 
 ### 🔖 Description
@@ -27,7 +23,8 @@ Welcome to Rancid Tomatillos, your go-to platform for all things cinema! Browse 
 
 ### 🧱 Technologies Used 
 
-<div align="center">  
+ <!--<div align="center">  -->
+ <div>
   <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
   <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
   <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
@@ -71,7 +68,6 @@ The primary objectives of this project are as follows:
 
 ### 👁️‍🗨️ Preview of App
 ![App Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWhyd3JvbDh1Mmphajk2bmg3bWl3YTI4cnFkNWNpMzBzbDYzOWljaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DibSAZVk1sicwXfTw3/giphy.gif)
-
 
 ---
 
@@ -157,6 +153,7 @@ HTML and CSS served as the building blocks for our app's sleek design and intuit
 The integration of Cypress, an industry-standard testing framework, ensured that our application meets quality benchmarks. This enabled us to automate tests, guaranteeing that the app performs optimally across various browsers and devices.
 
 <!-- #### Major Wins -->
+<h4>
   <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
        alt="Red Tomato Logo" 
        style="width: 30px; margin-right: 10px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
