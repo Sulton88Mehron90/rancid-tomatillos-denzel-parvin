@@ -1,12 +1,16 @@
 <div align="center">
-  <h1 style="color:red;">
+<div>
+  <h1 style="color:red; display: inline;">
     Rancid Tomatillos
-    <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/>
+    <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" 
+       alt="Rancid Tomatillos Logo" 
+       width="50" 
+       style="vertical-align: middle; display: inline;" />
+  </h1
 
-<img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
-     alt="Red Tomato Logo" 
-     style="width: 42px; margin-top: 80px; margin-bottom: 80px; margin-right: 28px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
-  </h1>
+  <!-- <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
+       alt="Red Tomato Logo" 
+       style="width: 30px; margin-left: 10px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle; display: inline;" /> -->
 </div>
 
 ### 🔖 Description
@@ -17,7 +21,7 @@ Welcome to Rancid Tomatillos, your go-to platform for all things cinema! Browse 
 
 ### 🖇️ Deployed Link
 
-[Open the app here](#)
+[Open the app here](https://rancid-tomatillos-denzel-parvin.vercel.app/)
 
 ---
 
@@ -64,18 +68,18 @@ The primary objectives of this project are as follows:
 - Learn to integrate APIs to fetch data, handle network requests efficiently, manage state, and implement error-handling mechanisms.
 
 ---
-<!-- 
+
 ### 👁️‍🗨️ Preview of App
+![App Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWhyd3JvbDh1Mmphajk2bmg3bWl3YTI4cnFkNWNpMzBzbDYzOWljaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DibSAZVk1sicwXfTw3/giphy.gif)
 
-![App Preview](#)
 
---- -->
+---
 
 ### 🤝🏼 Contributors
 
 <!-- - [Denzel Turambi](https://github.com/Denzel-Turambi)
 - [Parvin A. Sattorova](https://github.com/Sulton88Mehron90) -->
-<!-- 
+
 <table>
     <tr>
         <td> Denzel Turambi
@@ -95,38 +99,38 @@ The primary objectives of this project are as follows:
             <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
             <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
         </td>
+    </tr>
+    <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
+
+<!-- <table>
+    <tr>
+        <td> Denzel Turambi
+            <a href="https://www.linkedin.com/in/denzel-turambi-71a298267/">LinkedIn</a> || 
+            <a href="https://github.com/Denzel-Turambi">GitHub</a> 
+        </td>
+        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/Denzel-Turambi.png" alt="GitHub Avatar" width="150"></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td> Parvin A. Sattorova 
+            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
+            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
+        </td>
+        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
     </tr>
     <tr>
         <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
     </tr>
 </table> -->
-
-<table>
-    <tr>
-        <td> Denzel Turambi
-            <a href="https://www.linkedin.com/in/denzel-turambi-71a298267/">LinkedIn</a> || 
-            <a href="https://github.com/Denzel-Turambi">GitHub</a> 
-        </td>
-        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://github.com/Denzel-Turambi.png" alt="GitHub Avatar" width="150"></td>
-    </tr>
-</table>
-
-
-<table>
-    <tr>
-        <td> Parvin A. Sattorova 
-            <a href="https://www.linkedin.com/in/parvin-sattorova-edwards-357526b3/">LinkedIn</a> || 
-            <a href="https://github.com/Sulton88Mehron90">GitHub</a> 
-        </td>
-        <td><img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/Tomatillo.png" alt="Rancid Tomatillos Logo" width="50" style="vertical-align:middle"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://avatars.githubusercontent.com/u/119267809?v=4" alt="GitHub Avatar" width="150"></td>
-    </tr>
-</table>
 
 ---
 <!-- <table>
@@ -152,13 +156,26 @@ HTML and CSS served as the building blocks for our app's sleek design and intuit
 
 The integration of Cypress, an industry-standard testing framework, ensured that our application meets quality benchmarks. This enabled us to automate tests, guaranteeing that the app performs optimally across various browsers and devices.
 
-#### Major Wins
+<!-- #### Major Wins -->
+  <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
+       alt="Red Tomato Logo" 
+       style="width: 30px; margin-right: 10px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
+  Major Wins
+</h4>
 - One of the most significant achievements was the effective teamwork. Our combined skills and effective communication facilitated a smooth development process, culminating in an application that not only meets but exceeds user expectations.
 - Achieved a visually pleasing design for the app.
 - Successfully implemented search and dynamic trailer fetching for each movie.
 
-#### Challenges
+<!-- #### Challenges -->
+<h4>
+  <img src="https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/Feat/videos/src/images/redTomato.png" 
+       alt="Red Tomato Logo" 
+       style="width: 30px; margin-right: 10px; border: 2px solid rgb(11, 166, 52); border-radius: 50%; padding: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; transform-origin: right; vertical-align: middle;" />
+  Challenges
+</h4>
 - Conducting end-to-end testing using Cypress posed some hurdles.
 - Implementing robust error handling was a complex but necessary part of the project.
 
 ---
+
+
