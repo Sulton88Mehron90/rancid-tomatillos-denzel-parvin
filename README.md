@@ -13,7 +13,11 @@
 Welcome to Rancid Tomatillos, your go-to platform for all things cinema! Browse our extensive library of movies, delve into detailed information on each film, and even watch trailers. Use the search feature to find movies that pique your interest, or filter films based on ratings to discover hidden gems.
 
 ---
+### 👁️‍🗨️ Preview of App
 
+[Rancid Tomatillos](https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/main/src/images/Rancid-Tomatillos.gif)
+
+---
 ### 🖇️ Deployed Link
 
 [Open the app here](https://rancid-tomatillos-denzel-parvin.vercel.app/)
@@ -61,12 +65,6 @@ The primary objectives of this project are as follows:
 
 ### API Integration and Data Handling
 - Learn to integrate APIs to fetch data, handle network requests efficiently, manage state, and implement error-handling mechanisms.
-
----
-
-### 👁️‍🗨️ Preview of App
-
-![App Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWhyd3JvbDh1Mmphajk2bmg3bWl3YTI4cnFkNWNpMzBzbDYzOWljaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DibSAZVk1sicwXfTw3/giphy.gif)
 
 ---
 
