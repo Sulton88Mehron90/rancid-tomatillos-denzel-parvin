@@ -13,16 +13,20 @@
 Welcome to Rancid Tomatillos, your go-to platform for all things cinema! Browse our extensive library of movies, delve into detailed information on each film, and even watch trailers. Use the search feature to find movies that pique your interest, or filter films based on ratings to discover hidden gems.
 
 ---
-
+### 👁️‍🗨️ Preview of App
 ![Rancid Tomatillos](https://github.com/Sulton88Mehron90/rancid-tomatillos-denzel-parvin/blob/main/src/images/Rancid-Tomatillos.gif)
 
----
+<!-- ---
 ### 🖇️ Deployed Link
+
+[Open the app here](https://rancid-tomatillos-denzel-parvin.vercel.app/) -->
+
+--- 
+### 🌐 Live Demo
 
 [Open the app here](https://rancid-tomatillos-denzel-parvin.vercel.app/)
 
 ---
-
 ### 🧱 Technologies Used 
 
 <div>  
