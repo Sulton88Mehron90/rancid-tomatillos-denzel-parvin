@@ -40,6 +40,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "cypress": "^13.0.0"
+    "cypress": "^13.1.0"
   }
 }

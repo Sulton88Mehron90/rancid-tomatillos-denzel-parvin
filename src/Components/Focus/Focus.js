@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, NavLink, Navigate } from 'react-router-dom';
 import { getSingleMovie, getSingleMovieVideos } from "../ApiCalls";
 import "./Focus.css";
 
@@ -18,14 +18,54 @@ function Focus({ toggleSearch }) {
   useEffect(() => {
     getSingleMovie(movieID.id)
       .then(data => {
+        if (!data.movie) {
+          setSingleMovieError('404');
+          return;
+        }
         setSingleMovie(data.movie);
         return getSingleMovieVideos(movieID.id);
       })
       .then(data => {
-        setSingleMovieVideos(data.videos);
+        if (data && data.videos) {
+          setSingleMovieVideos(data.videos);
+        }
       })
-      .catch(handleError);
+      .catch(error => {
+        if (error.message === "404") {
+          setSingleMovieError('404');
+        } else {
+          setSingleMovieError("Uh oh! Looks like something went wrong. Try again later.");
+        }
+      });
   }, [movieID.id]);
+  
+  if (singleMovieError === '404') {
+    return <Navigate to="/404" />;
+  }
+
+  if (singleMovieError) {
+    return <h2>Uh oh! Looks like something went wrong. Try again later.</h2>;
+  }
+  
+  // useEffect(() => {
+  //   getSingleMovie(movieID.id)
+  //     .then(data => {
+  //       setSingleMovie(data.movie);
+  //       return getSingleMovieVideos(movieID.id);
+  //     })
+  //     .then(data => {
+  //       setSingleMovieVideos(data.videos);
+  //     })
+  //     .catch(handleError);
+  // }, [movieID.id]);
+
+
+  // if (singleMovieError) {
+  //   return (
+  //     <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
+  //   );
+  // }
+
 
   const handleTrailerButtonClick = () => {
     setShowVideo(prevShowVideo => !prevShowVideo);
@@ -34,13 +74,6 @@ function Focus({ toggleSearch }) {
   <button className="trailer-button" onClick={handleTrailerButtonClick}>
     {showVideo ? "Close Trailer" : "Watch Trailer"}
   </button>
-
-
-  if (singleMovieError) {
-    return (
-      <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
-    );
-  }
 
   return (
     <div id="focus-container" style={{

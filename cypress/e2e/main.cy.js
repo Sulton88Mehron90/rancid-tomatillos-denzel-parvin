@@ -41,11 +41,9 @@ describe('Main User Flow', () => {
         cy.get('@trailerButton').should('be.visible').click();
         cy.get('.video-container iframe', { timeout: 10000 }).should('be.visible');
         cy.get('@trailerButton').click();
-        cy.get('.video-container iframe').should('not.exist');
-      } else {
-        cy.get('.video-container iframe').should('not.exist');
       }
-    });
+      cy.get('.video-container iframe').should('not.exist');
+    });    
   });
   
   it('should allow the user to navigate back to all movies by clicking the back button', () => {
