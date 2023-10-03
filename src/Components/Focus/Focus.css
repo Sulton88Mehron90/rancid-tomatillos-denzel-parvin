@@ -15,7 +15,7 @@
 #focus-text-content {
   background: transparent;
   padding-left: 20px;
-  padding-top: 300px;
+  padding-top: 100px !important;
   margin-right: 30px;
   flex: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
