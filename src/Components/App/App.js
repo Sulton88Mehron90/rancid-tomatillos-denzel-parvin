@@ -86,10 +86,6 @@ function App() {
         <Route path="/movies/:id" element={<Focus toggleSearch={toggleSearch} />} />
         <Route path="/404" element={<ErrorHandling />} />
         <Route path="*" element={<Navigate to="/404" />} />
-        {/* 
-        <Route path="/movies/:id" element={<Focus toggleSearch={toggleSearch} />} />
-        <Route path="/404" element={<ErrorHandling />} />
-        <Route path="*" element={<Navigate to="/404" />} /> */}
       </Routes>
     </main>
   )

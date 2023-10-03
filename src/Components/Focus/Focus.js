@@ -63,8 +63,8 @@ function Focus({ toggleSearch }) {
         <div className="button-container">
           {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
             <button className="trailer-button" onClick={handleTrailerButtonClick}>
-        {showVideo ? "Close Trailer" : "Watch Trailer"}
-      </button>
+              {showVideo ? "Close Trailer" : "Watch Trailer"}
+            </button>
           )}
         </div>
         <NavLink to="/">
@@ -72,7 +72,11 @@ function Focus({ toggleSearch }) {
         </NavLink>
       </div>
       <div className="image-video-container">
-        <img src={singleMovie.backdrop_path} alt={singleMovie.title} />
+        <img
+          src={singleMovie.backdrop_path}
+          alt={singleMovie.title}
+          className={showVideo ? "no-effects" : ""}
+        />
         {showVideo && (
           <div className="video-container">
             {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (

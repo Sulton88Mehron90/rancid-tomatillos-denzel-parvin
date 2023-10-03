@@ -34,11 +34,16 @@
   color: #FFD700;
 }
 
-#focus-container h2,
-#focus-container h3 {
+#focus-container h2 {
   margin: 0;
   padding: 10px;
   font-size: 2rem;
+}
+
+#focus-container h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5rem;
 }
 
 #focus-container p {
@@ -93,6 +98,13 @@
   transform: scale(0.9);
   box-shadow: none;
   position: relative;
+}
+
+#focus-container img.no-effects:hover, 
+#focus-container img.no-effects:active {
+  transform: none !important;
+  box-shadow: none !important;
+  border: 3px solid rgb(11, 166, 52) !important; 
 }
 
 
