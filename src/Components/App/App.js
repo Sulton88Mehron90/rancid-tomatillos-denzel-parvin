@@ -23,7 +23,7 @@ function App() {
 
   function toggleSearch() {
     clearInput();
-    if(searchVisible){  
+    if (searchVisible) {
       setSearchVisible(false);
     } else {
       setSearchVisible(true);
@@ -41,13 +41,11 @@ function App() {
     setIsLoading(false);
   }
 
-  // Update the 'filter' state whenever 'movies' or 'search' state changes.
   useEffect(() => {
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(search));
     setFilter(filteredMovies);
   }, [movies, search]);
 
-  // Update the 'search' state based on the user's input in the search box.
   function searchFilter(event) {
     const searchMovie = event.target.value.toLowerCase();
     setSearch(searchMovie);
@@ -88,6 +86,10 @@ function App() {
         <Route path="/movies/:id" element={<Focus toggleSearch={toggleSearch} />} />
         <Route path="/404" element={<ErrorHandling />} />
         <Route path="*" element={<Navigate to="/404" />} />
+        {/* 
+        <Route path="/movies/:id" element={<Focus toggleSearch={toggleSearch} />} />
+        <Route path="/404" element={<ErrorHandling />} />
+        <Route path="*" element={<Navigate to="/404" />} /> */}
       </Routes>
     </main>
   )

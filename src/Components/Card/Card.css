@@ -5,12 +5,12 @@ div[id] {
   text-align: center;
   color: #ffffff;
   overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out; 
+  transition: box-shadow 0.3s ease-in-out;
   position: relative;
   z-index: 1;
 }
 
- div[id]:hover { 
+div[id]:hover {
   outline: 2px solid gray;
   outline-offset: 10px;
 }
@@ -44,27 +44,34 @@ div[id] h3 {
 }
 
 .green-rating-logo:hover {
-  transform: rotate(-15deg) scale(1.1); 
+  transform: rotate(-15deg) scale(1.1);
   box-shadow: 0 0 20px #fff;
 }
 
-.no-underline, .no-underline:visited, .no-underline:focus, .no-underline:active {
+.no-underline,
+.no-underline:visited,
+.no-underline:focus,
+.no-underline:active {
   text-decoration: none;
   outline: none;
 }
 
-/* Responsive card settings */
 @media (max-width: 768px) {
+
+  h2 {
+    font-size: 0.5rem;
+  }
+
   div[id] {
     border-radius: 4px;
     width: 90%;
     margin: 0 auto;
   }
-  
+
   div[id] h3 {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
-  
+
   .green-rating-logo,
   .red-rating-logo {
     height: 20px;
@@ -72,24 +79,52 @@ div[id] h3 {
   }
 
   .rating-container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
   }
 }
 
 @media (max-width: 480px) {
   div[id] h3 {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
-  
+
   .green-rating-logo,
   .red-rating-logo {
-    height: 15px; 
+    height: 15px;
     width: 15px;
   }
 
   .rating-container {
-    margin-bottom: 3px; 
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 0.1rem;
+  }
+
+  div[id] {
+    border-radius: 4px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  div[id] h3 {
+    font-size: 0.8rem;
+  }
+
+  .green-rating-logo,
+  .red-rating-logo {
+    height: 20px;
+    width: 20px;
+  }
+
+  .rating-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
   }
 }

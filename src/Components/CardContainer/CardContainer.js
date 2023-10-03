@@ -36,9 +36,23 @@ function CardContainer({movies, search, filter, toggleSearch}) {
 };
 
 CardContainer.propTypes = {
-  movies: PropTypes.array.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string,
+      average_rating: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired
+    })
+  ).isRequired,
   search: PropTypes.string.isRequired,
-  filter: PropTypes.array.isRequired,
+  filter: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string,
+      average_rating: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired
+    })
+  ).isRequired,
   toggleSearch: PropTypes.func.isRequired
 };
 
