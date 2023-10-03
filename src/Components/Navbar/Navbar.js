@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Navbar = ({search, searchFilter, searchVisible, toggleSearch}) => {
-  // Logic for setting the day message
   const [dayMessage, setDayMessage] = useState('');
   useEffect(() => {
     const time = new Date();

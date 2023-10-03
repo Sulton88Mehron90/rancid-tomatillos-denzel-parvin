@@ -11,10 +11,6 @@ function Focus({ toggleSearch }) {
 
   const movieID = useParams();
 
-  const handleError = (error) => {
-    setSingleMovieError("Uh oh! Looks like something went wrong. Try again later.");
-  };
-
   useEffect(() => {
     getSingleMovie(movieID.id)
       .then(data => {
@@ -38,7 +34,7 @@ function Focus({ toggleSearch }) {
         }
       });
   }, [movieID.id]);
-  
+
   if (singleMovieError === '404') {
     return <Navigate to="/404" />;
   }
@@ -46,34 +42,10 @@ function Focus({ toggleSearch }) {
   if (singleMovieError) {
     return <h2>Uh oh! Looks like something went wrong. Try again later.</h2>;
   }
-  
-  // useEffect(() => {
-  //   getSingleMovie(movieID.id)
-  //     .then(data => {
-  //       setSingleMovie(data.movie);
-  //       return getSingleMovieVideos(movieID.id);
-  //     })
-  //     .then(data => {
-  //       setSingleMovieVideos(data.videos);
-  //     })
-  //     .catch(handleError);
-  // }, [movieID.id]);
-
-
-  // if (singleMovieError) {
-  //   return (
-  //     <h2>Uh oh! Looks like something went wrong. Try again later.</h2>
-  //   );
-  // }
-
 
   const handleTrailerButtonClick = () => {
     setShowVideo(prevShowVideo => !prevShowVideo);
   };
-
-  <button className="trailer-button" onClick={handleTrailerButtonClick}>
-    {showVideo ? "Close Trailer" : "Watch Trailer"}
-  </button>
 
   return (
     <div id="focus-container" style={{
@@ -90,29 +62,31 @@ function Focus({ toggleSearch }) {
         <p><span className="label">release date:</span> {singleMovie.release_date}</p>
         <div className="button-container">
           {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
-            <button className={`trailer-button ${showVideo ? "active" : ""}`} onClick={handleTrailerButtonClick}>
-              <span className={`play-icon ${showVideo ? "green" : ""}`}></span>
-              {showVideo ? "Close Trailer" : "Watch Trailer"}
-            </button>
+            <button className="trailer-button" onClick={handleTrailerButtonClick}>
+        {showVideo ? "Close Trailer" : "Watch Trailer"}
+      </button>
           )}
         </div>
         <NavLink to="/">
           <button className="back-button" aria-label="Go Back" onClick={toggleSearch}></button>
         </NavLink>
       </div>
-      <img src={singleMovie.backdrop_path} alt={singleMovie.title} />
-      {showVideo && (
-        <div className="video-container">
-          {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
-            <iframe
-              width="560"
-              height="315"
-              src={`https://www.youtube.com/embed/${singleMovieVideos[0].key}`}
-              allowFullScreen
-            ></iframe>
-          )}
-        </div>
-      )}
+      <div className="image-video-container">
+        <img src={singleMovie.backdrop_path} alt={singleMovie.title} />
+        {showVideo && (
+          <div className="video-container">
+            {singleMovieVideos.length > 0 && singleMovieVideos[0].site === "YouTube" && (
+              <iframe
+                title="Movie Trailer"
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${singleMovieVideos[0].key}`}
+                allowFullScreen
+              ></iframe>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
