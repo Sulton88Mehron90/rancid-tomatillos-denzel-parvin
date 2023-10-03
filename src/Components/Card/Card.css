@@ -28,8 +28,14 @@ div[id]:hover {
   outline-offset: 10px;
 }
 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 div[id] img {
-  width: 100%;
+  width: 20rem;
   object-fit: cover;
 }
 
