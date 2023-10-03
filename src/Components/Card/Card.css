@@ -1,3 +1,14 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 div[id] {
   background-color: #222222;
   border: 1px solid #444444;
@@ -8,6 +19,8 @@ div[id] {
   transition: box-shadow 0.3s ease-in-out;
   position: relative;
   z-index: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 div[id]:hover {
@@ -22,8 +35,13 @@ div[id] img {
 
 div[id] h3 {
   margin: 0;
-  padding: 10px;
-  font-size: 1.2rem;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.rating-container img {
+  width: 20px; 
+  height: 20px; 
 }
 
 .rating-container {
@@ -113,7 +131,7 @@ div[id] h3 {
   }
 
   div[id] h3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .green-rating-logo,
