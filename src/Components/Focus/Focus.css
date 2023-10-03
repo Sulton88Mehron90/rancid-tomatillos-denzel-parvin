@@ -228,6 +228,7 @@
 
 /* Tablet and larger mobile screens */
 @media screen and (min-width: 427px) and (max-width: 768px) {
+
   #focus-text-content {
     padding-left: 15px;
     padding-top: 200px;
@@ -244,8 +245,10 @@
 
   #focus-container img {
     width: 50%;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
+    padding-right: 0.2rem !important;
+    padding-left: 0.2rem !important;
   }
 
   .trailer-button {
@@ -258,14 +261,14 @@
     padding: 8px 15px;
     margin-left: 0.1rem;
     width: 7rem;
+    height: 2.3rem;
   }
-
 
   .video-container {
     top: 70%;
-    left: 560px;
-    max-width: 1rem;
-    max-height: 1rem;
+    margin-left: -80px;
+    max-width: 10rem;
+    max-height: 10rem;
   }
 }
 
