@@ -86,7 +86,6 @@
   transform: translateY(-50%);
 }
 
-
 #focus-container img:hover {
   transform: scale(1.2);
   border: none;
@@ -192,10 +191,18 @@
 
 /* Very small mobile screens */
 @media screen and (max-width: 390px) {
+
   #focus-text-content {
-    padding-left: 10px;
-    padding-top: 150px;
-    font-size: 0.8rem;
+    padding-left: 10px !important;
+    padding-top: -150px !important;
+    font-size: 1.8rem !important;
+  }
+
+  #focus-container img {
+    width: 50% !important;
+    height: 30% !important;
+    margin-top: -60px !important;
+    margin-left: 70px !important;
   }
 
   #focus-container h2,
@@ -207,34 +214,70 @@
     font-size: 0.4rem;
   }
 
-  #focus-container img {
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
   .trailer-button {
     padding: 8px 15px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    margin-left: -0.1rem;
+    height: 1.5rem;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1.9rem;
   }
 
   .video-container {
-    top: 30%;
-    left: -250px;
+    top: 100% !important;
+    left: 80px !important;
+    max-width: 7rem;
+    max-height: 5rem;
   }
 }
 
+
 /* Slightly larger mobile screens */
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 391px) and (max-width: 425px) {
+
   #focus-text-content {
     padding-left: 12px;
     padding-top: 180px;
   }
 
   #focus-container img {
-    width: 75%;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    width: 10%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  #focus-container p {
+    font-size: 0.6rem;
+  }
+
+  #focus-container h2,
+  #focus-container h3 {
+    font-size: 0.9rem !important;
+  }
+
+  .trailer-button {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    margin-left: 2rem;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    margin-left: 0.1rem;
+    width: 7rem;
+    height: 2.3rem;
+  }
+
+  .video-container {
+    top: 70%;
+    left: -80px;
+    max-width: 10rem;
+    max-height: 10rem;
   }
 }
 
